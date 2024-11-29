@@ -3,16 +3,16 @@
 In questo capitolo vengono descritte tutte le attività da me svolte durante lo \emph{stage}, divise nelle sezioni “Analisi”, “Progettazione”, “Programmazione” e “Verifica e validazione”, in modo da fornire una panoramica chiara e strutturata del lavoro svolto, evidenziando il processo seguito e le competenze acquisite in ciascuna fase.\\
 Esse non sono intese come completamente sequenziali bensì, fin dalla prima fase, sono presenti tutte le attività correlate in modo da coprire l'intero periodo di \emph{stage}.\\
 \section{Analisi}
-In questa sezione sono presenti tutte le attività analitiche da me svolte e il suo scopo è descrivere le modalità con cui ho compreso i bisogni e i requisiti del mio progetto di \emph{stage}. 
+In questa sezione sono presenti tutte le attività analitiche da me svolte e il suo scopo è descrivere le modalità con cui ho compreso i bisogni, i requisiti e le tecnologie del mio progetto di \emph{stage}.\\
+Essendo quest'ultimo focalizzato per la maggior parte su attività legate alla ricerca e all'esplorazione tecnologica, la fase di analisi rappresenta la parte più corposa delle mie attività.\\
 
 \subsection{Requisiti}
-Gli obiettivi del mio \emph{stage}, come dichiarati nel documento “Progetto Formativo” generato all'inizio del suo svolgimento, sono divisi in categorie:
+I requisiti del mio \emph{stage}, derivanti in parte dalle dichiarazioni aziendali presenti nel documento “Progetto Formativo” generato all'inizio del suo svolgimento, e in parte conseguenza dell'analisi dei requisiti avvenuta in corrispondenza con la presenza di specifiche necessità progettuali, sono divisi in categorie:
 \begin{enumerate}
 	\item[O -]requisiti obbligatori, vincolanti in quanto obiettivi primari richiesti dall'azienda.
     \item[D -]requisiti desiderabili, non strettamente necessari ma dal riconoscibile valore aggiunto.
     \item[F -]requisiti facoltativi / opzionali, rappresentanti un valore aggiunto non strettamente competitivo.\\
 \end{enumerate}
-
 Essi sono:
 \begin{table}[htbp]
     \label{tab:obiettiviProgettuali}
@@ -20,22 +20,32 @@ Essi sono:
     \begin{tabularx}{\textwidth}{|l|X|l|}
     \hline
     \textbf{Codice} & \textbf{Descrizione}\\
+    \hline \textbf{O1}    & Comprensione e mappatura delle funzionalità possibili tramite l'adozione dell'applicazione Microsoft Power Automate.\\
+    \hline O1.1  & Analisi approfondita riguardo ai flussi Power Automate ed individuazione delle caratteristiche, positive e negative, della sua adozione in azienda.\\
+    \hline O1.2  & Sviluppo collaborativo sui flussi Power Automate.\\
+    \hline O1.3  & Produzione ed esposizione al \emph{tutor} aziendale e al \emph{team} di sviluppo di una presentazione riguardo ai risultati della mia analisi sull'adozione di Power Automate in azienda.\\
+    \hline \textbf{O2}  & Comprensione ed utilizzo della tecnologia Microsoft Power Apps e relative fasi di sviluppo collaborativo.\\
+    \hline O2.1  & Comprensione di Power Apps affiancando il \emph{team} di sviluppo fino al raggiungimento della comprensione dei metodi lavorativi e dei prodotti aziendali sviluppati con tale strumento.\\
+    \hline O2.2  & Identificazione e definizione di un metodo adatto allo sviluppo collaborativo di applicazioni Power Apps.\\
+    \hline O2.3  & Ottenimento di avanzamenti nello stato dei lavori di applicazioni aziendali realizzate con Power Apps.\\
+    \hline \textbf{O3}  & Individuazione ed implementazione di un efficace sistema di versionamento per progetti realizzati utilizzando tecnologie Power Automate e Power Apps\\
+    \hline \textbf{O4}  & Comprensione delle metodologie \gls{DevOps} e realizzazione della documentazione relativa alla sua applicabilità su tecnologie Power Automate e Power Apps.\\
     \hline
-    O1    & Mappatura delle funzionalità possibili tramite l'adozione dei due applicativi \gls{Sistemi} e Office365.\\
-    \hline O1.1  & Analisi approfondita del sistema e delle parti interessate.\\
-    \hline O1.2  & Studio delle modalità di lavoro degli utenti.\\
-    \hline O1.3  & Produzione di una completa documentazione di uso.\\
-    \hline O2  & Personalizzazione e integrazione: individuare le modalità di utilizzo.\\
+    \hline \textbf{D1}  & Collaborazione con gli altri stagisti universitari e individuazione di soluzioni collaborative relative ai bisogni progettuali comuni.\\
+    \hline \textbf{D2}  & Realizzazione di PoC a supporto delle soluzioni individuate durante le fasi di ricerca.\\
+    \hline D2.1  & Realizzazione di PoC riguardo allo sviluppo di flussi Power Automate approvativi.\\
+    \hline D2.2  & Realizzazione di PoC riguardo all'integrazione tra flussi Power Automate ed elementi esterni tramite le chiamate \gls{http}.\\
+    \hline D2.3  & Realizzazione di PoC riguardo al processo \gls{DevOps} di \emph{build} su progetti realizzati con tecnologie Power Automate/Power Apps.\\
+    \hline D2.4  & Realizzazione di PoC riguardo all'applicazione di analisi statica del codice su progetti realizzati con tecnologie Power Automate/Power Apps.\\
+    \hline D2.5  & Realizzazione di PoC riguardo al processo \gls{DevOps} di \emph{test} su progetti realizzati con tecnologie Power Automate/Power Apps.\\
+    \hline \textbf{D3}  & Esecuzione di \emph{meeting} e scambio di documenti con gli altri stagisti universitari al fine di comprendere l'applicabilità delle fasi di \gls{DevOps} in ambito \gls{Sistemi} \\
     \hline
-    \hline D1  & Analisi dei requisiti per l'integrazione aziendale della metodologia \gls{DevOps} in ambito \GLS{Sistemi} e Office365.\\
-    \hline D2  & Produzione di una completa documentazione progettuale.\\
-    \hline
-    \hline F1  & Realizzazione di \emph{Proof of concept}.\\
-    \hline F2  & Presentazione interna.\\
-    \hline F3  & Predisposizione della documentazione.\\
+    \hline \textbf{F1}  & Esplorazione della tecnologia Angular mediante realizzazione di un progetto di \emph{test}\\
+    \hline \textbf{F2}  & Integrazione di un progetto Angular con le fasi di \gls{DevOps} mediante un \emph{server} Jenkins.\\
+    \hline \textbf{F3}  & Realizzazione ed esposizione di una presentazione finale, in collaborazione con gli altri stagisti, riguardo tutto il lavoro fatto durante lo \emph{stage}.\\
     \hline
     \end{tabularx}
-    \caption{Tabella degli obiettivi progettuali.}
+    \caption{Tabella dei requisiti progettuali.}
 \end{table}%
 \subsection{Ambiente di lavoro}
 Durante i primi giorni dello \emph{stage} sono stato introdotto all'ambiente di lavoro e alle tecnologie di comunicazione e collaborazione.\\
@@ -75,7 +85,7 @@ Essi sono direttamente accessibili dalla \emph{home} di Power Automate e Power A
     Fonte: \url{https://learn.microsoft.com/it-it/training/browse/?products=power-automate}.
 \end{figure}
 
-Lo studio di tali moduli mi ha permesso di comprendere il funzionamento e le \emph{features} principali di Power Automate:\\
+\noindent Lo studio di tali moduli mi ha permesso di comprendere il funzionamento e le \emph{features} principali di Power Automate:\\
 Esso è formato da una pagina \emph{web} che offre controllo sui flussi di automazione creati: è possibile modificarli e visualizzarne i dettagli, le esecuzioni e le statistiche. È possibile creare dei nuovi flussi partendo da altri progetti pubblici, o a noi condivisi, e modelli offerti da Microsoft da adattare alle proprie esigenze.\\
 La modifica di un flusso non avviene mediante la scrittura di codice tramite un linguaggio di programmazione bensì tramite una composizione “a blocchi” personalizzabili collegati tra loro ciascuno avente proprietà e attributi definiti.\\
 Essi sono selezionabili da una lista di blocchi relativi ciascuno a una funzionalità specifica di un servizio Microsoft.\\
@@ -88,12 +98,16 @@ Esistono tre tipologie principali di Trigger le quali determinano la tipologia s
     \item Pianificato: per esempio “Ricorrenza”, il quale attiva il flusso periodicamente.\\
 \end{itemize}
 
-\noindent Ad ogni Trigger possono essere collegate, in serie o in parallelo, una moltitudine di Azioni, ciascuna responsabile di uno specifico compito, per esempio sono presenti le azioni “Inizializza variabile”, “Avvia e attendi un'approvazione”, “Teams - Crea una chat” e “OneDrive - Crea file”.\\
+\noindent Ad ogni Trigger possono essere collegate, in serie o in parallelo, una moltitudine di Azioni, ciascuna responsabile di uno specifico compito, per esempio sono presenti le azioni “Inizializza variabile”, “Avvia e attendi un'approvazione”, “Teams - Crea una chat” e “Outlook - Invia un messaggio di posta elettronica”.\\
 Sono inoltre presenti azioni dedicate alla gestione logica dei flussi come “Condizione" e “Do until”. La prima rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con “if”, responsabile della ramificazione dell'esecuzione del flusso in base a una condizione specifica.\\
 La seconda rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con “Do while”, responsabile della ripetizione condizionata di un insieme di azioni garantendone sempre la prima esecuzione.\\
 
-/// immagine esempio di flusso/// 
-
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.6\columnwidth]{esempioFlusso} 
+    \caption{Esempio di un flusso Power Automate istantaneo.}
+    \label{fig:esempioFlusso}
+\end{figure}
 \noindent Successivamente è emersa, da parte del tutor aziendale, la necessità di integrare i flussi Power Automate con il \emph{software} gestionale WOW e gli altri prodotti aziendali al fine di poter integrare le funzionalità desiderate con libertà mantenendo coordinate le diverse parti del prodotto.\\
 Sono emersi quindi due requisiti: il primo, utile per apprendere le tecnologie in oggetto, è relativo alla creazione di un flusso che automatizzi un processo approvativo.\\
 Il secondo, più concreto e integrabile con i prodotti aziendali, è basato sull'applicazione, ai flussi Power Automate, di chiamate \gls{http}(Hypertext Transfer Protocol): in italiano “protocollo di trasferimento ipertestuale” è un protocollo di rete, ovvero un insieme di regole formalmente descritte che definiscono le modalità di comunicazione tra due o più apparecchiature elettroniche, usato come principale sistema per la trasmissione d'informazioni sul \emph{web}.\\
