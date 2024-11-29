@@ -63,7 +63,8 @@ Tali documenti comprendono i “Documenti di sviluppo sicuro” e includono:
 \end{itemize}
 Relativamente a quest'ultimo punto, nei primi giorni ho approfondito il lavoro svolto dagli altri stagisti tramite appositi \emph{meeting} nei quali mi hanno descritto i risultati ottenuti fino a quel momento. Essi, avendo iniziato lo svolgimento del progetto circa una settimana prima, mi hanno esposto, mediante apposite presentazioni PowerPoint, le proprie ricerche riguardanti l'utilizzo dello strumento Git e dello studio avvenuto riguardo la possibilità di integrare tra loro gli strumenti Planner e Taiga. 
 
-\subsection{Requisiti progettuali}
+\subsection{Tecnologie oggetto di stage}
+In questo sottocapitolo vengono descritti i metodi di apprendimento e le nozioni apprese durante la fase di analisi delle tecnologie su cui si basa la ricerca del mio progetto di \emph{stage}.\\\\
 Dopo aver compreso le tecnologie e i principali processi aziendali, ho partecipato ad un \emph{meeting} con il \emph{tutor} aziendale al fine di discutere il mio progetto di \emph{stage}.\\
 I requisiti scaturiti da tale incontro sono stati: 
 \begin{itemize}
@@ -78,7 +79,7 @@ Essi sono direttamente accessibili dalla \emph{home} di Power Automate e Power A
 
 \begin{figure}[htbp] 
     \centering 
-    \includegraphics[width=1\columnwidth]{moduliPowerAutomate} 
+    \includegraphics[width=0.8\columnwidth]{moduliPowerAutomate} 
     \caption{Moduli formativi per Power Automate.}
     \label{fig:moduliPowerAutomate}
     \vspace{1mm}
@@ -100,11 +101,10 @@ Esistono tre tipologie principali di Trigger le quali determinano la tipologia s
 
 \noindent Ad ogni Trigger possono essere collegate, in serie o in parallelo, una moltitudine di Azioni, ciascuna responsabile di uno specifico compito, per esempio sono presenti le azioni “Inizializza variabile”, “Avvia e attendi un'approvazione”, “Teams - Crea una chat” e “Outlook - Invia un messaggio di posta elettronica”.\\
 Sono inoltre presenti azioni dedicate alla gestione logica dei flussi come “Condizione" e “Do until”. La prima rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con “if”, responsabile della ramificazione dell'esecuzione del flusso in base a una condizione specifica.\\
-La seconda rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con “Do while”, responsabile della ripetizione condizionata di un insieme di azioni garantendone sempre la prima esecuzione.\\
-
+La seconda rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con “Do while”, responsabile della ripetizione condizionata di un insieme di azioni garantendone sempre la prima esecuzione.
 \begin{figure}[htbp] 
     \centering 
-    \includegraphics[width=0.6\columnwidth]{esempioFlusso} 
+    \includegraphics[width=0.5\columnwidth]{esempioFlusso} 
     \caption{Esempio di un flusso Power Automate istantaneo.}
     \label{fig:esempioFlusso}
 \end{figure}
@@ -112,13 +112,13 @@ La seconda rappresenta la struttura di controllo rappresentata nei classici ling
 Sono emersi quindi due requisiti: il primo, utile per apprendere le tecnologie in oggetto, è relativo alla creazione di un flusso che automatizzi un processo approvativo.\\
 Il secondo, più concreto e integrabile con i prodotti aziendali, è basato sull'applicazione, ai flussi Power Automate, di chiamate \gls{http}(Hypertext Transfer Protocol): in italiano “protocollo di trasferimento ipertestuale” è un protocollo di rete, ovvero un insieme di regole formalmente descritte che definiscono le modalità di comunicazione tra due o più apparecchiature elettroniche, usato come principale sistema per la trasmissione d'informazioni sul \emph{web}.\\
 Esse permettono la comunicazione e lo scambio di dati tra flussi Power Automate e altri flussi o applicazioni: esiste infatti la possibilità di richiamare lo specifico Trigger “Alla ricezione di una richiesta HTTP” il quale genera un personale URL (Uniform Resource Locator), ovvero una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di \emph{computer}.\\
-In seguito è possibile utilizzare la corrispondente azione “Response” al fine di rispondere al chiamante con l'\emph{output} della richiesta.\\
-
+In seguito è possibile utilizzare la corrispondente azione “Response” al fine di rispondere al chiamante con l'\emph{output} della richiesta.
 \subsubsection*{Power Apps}
 I flussi Power Automate portano grande vantaggio in termini di efficienza dei processi aziendali e possono aumentare il numero di funzionalità di un'applicazione.\\
 Per questo motivo il loro utilizzo assume maggiore significato quando associato alla realizzazione di applicazioni Power Apps, le quali sono pensate per integrare nativamente i flussi creati.\\
+Il metodo di apprendimento con cui ho analizzato e studiato Power Apps deriva non solo da attività individuali tramite i moduli didattici offerti da Microsoft nell'apposito sito \emph{web}, simili a quelli per Power Automate, ma soprattutto grazie alla collaborazione con un membro del \emph{team} di sviluppo che ho affiancato. Egli è il responsabile in azienda di tutti i loro prodotti realizzati utilizzando le tecnologie oggetto del mio \emph{stage} e assieme le abbiamo attentamente analizzate e modificate al fine di migliorarle ed applicarci le soluzioni da me individuate relativamente alle pratiche \gls{DevOps} richieste.\\
 Power Apps offre la possibilità di creare nuove applicazioni e visionare le applicazioni create, o a noi condivise, con la possibilità di apportare modifiche. È inoltre possibile visualizzare informazioni e statistiche relative a tutte le applicazioni in nostro possesso.\\
-Lo sviluppo di tali applicazioni non avviene esclusivamente mediante codice di programmazione bensì dall'utilizzo di componenti, \emph{standard} o \emph{custom}, che vengono manualmente posizionati sull'interfaccia, creando in questo modo una struttura gerarchica ad albero chiamata "Tree View".\\
+Lo sviluppo di tali applicazioni non avviene esclusivamente mediante codice di programmazione bensì dall'utilizzo di componenti, \emph{standard} o \emph{custom}, che vengono manualmente posizionati sull'interfaccia, creando in questo modo una struttura gerarchica ad albero chiamata "Tree View".
 \begin{figure}[htbp] 
     \centering 
     \includegraphics[width=0.6\columnwidth]{powerAppsTreeView} 
@@ -127,11 +127,30 @@ Lo sviluppo di tali applicazioni non avviene esclusivamente mediante codice di p
     \vspace{1mm}
     Fonte: \url{https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/using-tree-view-on-form}.
 \end{figure}
-
-\noindent Al fine di modificare i parametri che lo compongono, ciascun componente può essere personalizzato tramite un'apposita finestra dell'interfaccia grafica. Questo non comprende solo le peculiarità grafiche ma soprattutto il loro comportamento a seguito di azioni specifiche: per esempio è possibile creare un componente “Pulsante” e personalizzarne il campo “OnSelect” al fine di eseguire conseguentemente un flusso Power Automate e inviarne i dati di \emph{output} ad un altro componente.\\
+\newpage \noindent Al fine di modificare i parametri che lo compongono, ciascun componente può essere personalizzato tramite un'apposita finestra dell'interfaccia grafica. Questo non comprende solo le peculiarità grafiche ma soprattutto il loro comportamento a seguito di azioni specifiche: per esempio è possibile creare un componente “Pulsante” e personalizzarne il campo “OnSelect” al fine di eseguire conseguentemente un flusso Power Automate e inviarne i dati di \emph{output} ad un altro componente.\\
 Tali istruzioni vengono definite utilizzando Microsoft Power Fx, il quale rappresenta un linguaggio di programmazione dichiarativo, fortemente tipizzato e con uso limitato di codice, usato in Microsoft Power Platform.\\
+Quest'ultima piattaforma include un insieme di strumenti e tecnologie, compresi Power Automate e Power Apps, pensati per offrire la possibilità di sviluppare prodotti \emph{software} con limitata necessità di scrivere, e conoscere, codice tramite linguaggi di programmazione.\\
 
+\subsection{Tecnologie strumentali}
+In questo sottocapitolo vengono descritti i metodi di apprendimento e le nozioni apprese durante la fase di analisi degli strumenti e delle tecnologie adottate al fine di perseguire gli obiettivi e soddisfare i requisiti di \emph{stage}.
+\subsubsection*{Jenkins}
+Al fine di applicare le automazioni necessarie per adottare al \emph{software} le metodologie \gls{DevOps}, come richiesto dagli obiettivi di \emph{stage}, ho individuato lo strumento Jenkins in quanto esso rispecchia perfettamente le mie necessità ed è inoltre già conosciuto e applicato dal resto del \emph{team} di sviluppo rappresentando quindi una tecnologia consolidata che non necessita di ulteriore formazione all'interno dell'azienda.\\
+Ho appreso le conoscenze necessarie per studiare e utilizzare tale strumento in totale autonomia mediante la consultazione delle guide e del numeroso materiale presente \emph{online} comprese le pagine \emph{web} ufficiali di Jenkins con gli annessi video \emph{tutorial}.\\
+Esso è uno strumento scritto in linguaggio di programmazione Java che viene eseguito all'interno di un \emph{web server} e offre la possibilità di creare, gestire, eseguire e monitorare dei progetti Jenkins chiamati “Job”, potendone visionare e registrare i \emph{report} di \emph{output}.\\
+Essi sono unità di lavoro configurabili che rappresentano un'attività o un progetto specifico che Jenkins esegue. Possono essere di diverso tipo ma tutti sono basati sull'esecuzione di uno \emph{script} o una \emph{pipeline} di automazione.\\
+Una \emph{pipeline} Jenkins è una sequenza di fasi chiamate “Stage”, eseguite in serie o in parallelo, responsabili di specifiche operazioni definite dall'utente, per esempio \emph{build}, \emph{test}, \emph{deploy}. Esse possono essere definite tramite il linguaggio di programmazione Groovy oppure tramite l'interfaccia grafica di Jenkins.\\
+Questo strumento permette dunque di fornire servizi di integrazione continua ed è indicato per l'applicazione di alcune fasi di \gls{DevOps} come Build e Test, il caricamento automatico dei file sul \emph{repository} di versionamento desiderato e l'autenticazione automatica ai servizi Microsoft tramite comandi Power Platform CLI.\\
+Quest'ultima è un'interfaccia a riga di comando che offre la possibiltà di eseguire un insieme di comandi specifici atti all'autenticazione e alla gestione degli ambienti e delle Microsoft Solutions.\\
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.9\columnwidth]{esempioJenkins} 
+    \caption{Esempio interfaccia di Jenkins.}
+    \label{fig:esempioJenkins}
+    \vspace{1mm}
+    Fonte: \url{https://commons.wikimedia.org/wiki/File:Updated-jenkins-view.png}.
+\end{figure}
 
+\subsubsection*{Microsoft Solutions}
 
 \subsection{DevOps}
 \subsubsection*{Plan}
@@ -142,6 +161,9 @@ Tali istruzioni vengono definite utilizzando Microsoft Power Fx, il quale rappre
 \subsubsection*{Deploy}
 \subsubsection*{Operate}
 \subsubsection*{Monitor}
+
+\subsection{Applicazioni aziendali}
+\subsection{Angular}
 
 \section{Progettazione}
 In questa sezione sono presenti tutte le attività progettuali da me svolte e il suo scopo è descrivere le modalità con cui ho individuato le soluzioni ai bisogni progettuali in modo da soddisfarne i requisiti.
