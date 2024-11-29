@@ -114,6 +114,25 @@ Il secondo, più concreto e integrabile con i prodotti aziendali, è basato sull
 Esse permettono la comunicazione e lo scambio di dati tra flussi Power Automate e altri flussi o applicazioni: esiste infatti la possibilità di richiamare lo specifico Trigger “Alla ricezione di una richiesta HTTP” il quale genera un personale URL (Uniform Resource Locator), ovvero una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di \emph{computer}.\\
 In seguito è possibile utilizzare la corrispondente azione “Response” al fine di rispondere al chiamante con l'\emph{output} della richiesta.\\
 
+\subsubsection*{Power Apps}
+I flussi Power Automate portano grande vantaggio in termini di efficienza dei processi aziendali e possono aumentare il numero di funzionalità di un'applicazione.\\
+Per questo motivo il loro utilizzo assume maggiore significato quando associato alla realizzazione di applicazioni Power Apps, le quali sono pensate per integrare nativamente i flussi creati.\\
+Power Apps offre la possibilità di creare nuove applicazioni e visionare le applicazioni create, o a noi condivise, con la possibilità di apportare modifiche. È inoltre possibile visualizzare informazioni e statistiche relative a tutte le applicazioni in nostro possesso.\\
+Lo sviluppo di tali applicazioni non avviene esclusivamente mediante codice di programmazione bensì dall'utilizzo di componenti, \emph{standard} o \emph{custom}, che vengono manualmente posizionati sull'interfaccia, creando in questo modo una struttura gerarchica ad albero chiamata "Tree View".\\
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.6\columnwidth]{powerAppsTreeView} 
+    \caption{Elemento Tree View per la gestione gerarchica dei componenti.}
+    \label{fig:powerAppsTreeView}
+    \vspace{1mm}
+    Fonte: \url{https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/using-tree-view-on-form}.
+\end{figure}
+
+\noindent Al fine di modificare i parametri che lo compongono, ciascun componente può essere personalizzato tramite un'apposita finestra dell'interfaccia grafica. Questo non comprende solo le peculiarità grafiche ma soprattutto il loro comportamento a seguito di azioni specifiche: per esempio è possibile creare un componente “Pulsante” e personalizzarne il campo “OnSelect” al fine di eseguire conseguentemente un flusso Power Automate e inviarne i dati di \emph{output} ad un altro componente.\\
+Tali istruzioni vengono definite utilizzando Microsoft Power Fx, il quale rappresenta un linguaggio di programmazione dichiarativo, fortemente tipizzato e con uso limitato di codice, usato in Microsoft Power Platform.\\
+
+
+
 \subsection{DevOps}
 \subsubsection*{Plan}
 \subsubsection*{Code}
