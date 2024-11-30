@@ -306,7 +306,7 @@ Per applicare a tali progetti l'analisi statica del codice, ho individuato come 
 \subsubsection*{Build}
 I \emph{file} generati da Power Automate e Power Apps al fine di rappresentare i flussi e le applicazioni create nelle rispettive interfacce di sviluppo, sono rappresentati da un pacchetto compresso ZIP contenente i file generati automaticamente da tali programmi.\\
 Essi sono principalmente di tipo JSON, e msapp e possiedono una struttura di difficile comprensione, pertanto non sono pensati per uno sviluppo manuale diretto.\\
-Le Microsoft Solution sono rappresentate dai \emph{file} corrispondenti a quelli dei flussi e delle applicazioni in esse contenuti e nessuno di questi componenti possiede un file eseguibile.\\
+Le Microsoft Solution sono rappresentate dai \emph{file} corrispondenti a quelli dei flussi e delle applicazioni in esse contenuti e nessuno di questi componenti possiede un \emph{file} eseguibile.\\
 Come metodo per l'esecuzione della fase Build automatica, ho individuato i comandi forniti dalla Power Platform CLI, automatizzati da un Job Jenkins, al fine di esportare i pacchetti relativi alle Soluzioni desiderate. 
 
 \subsubsection*{Test}
@@ -357,10 +357,82 @@ Le fasi di progettazione relative alle applicazioni aziendali su cui ho lavorato
 Eccezione è fatta per l'applicazione Non conformità che, a differenza delle altre, era nelle sue prime fasi di sviluppo.\\
 Al fine di comprenderne gli obiettivi ho preso parte a dei \emph{meeting} dedicati con il \emph{tutor} aziendale e la parte del \emph{team} di sviluppo coinvolta.\\ 
 Ho in seguito contribuito a progettare l'aspetto grafico e le soluzioni atte a soddisfarne i requisiti ma il mio periodo di \emph{stage} è terminato prima che io potessi iniziare il loro sviluppo.  
- 
 
-\section{Programmazione}
+\section{Sviluppo software e documentale}
 In questa sezione sono presenti tutte le attività da me svolte al fine di sviluppare e implementare le soluzioni individuate in fase di progettazione.
+\subsection{PoC iniziali}
+Le prime fasi di sviluppo dello \emph{stage} da me frequentato sono state autonome e a supporto della comprensione ed esplorazione delle tecnologie a me richieste. 
+Avendo iniziato le mie attività con Power Automate, ho realizzato un primo flusso al fine di testare l'utilizzo di Trigger, Azioni, collegamento con i servizi Microsoft OneDrive ed Excel, Azioni condizionali, cicli Do until, inizializzazione e modifica di variabili.\\
+Tale flusso viene eseguito automaticamente quando viene creato un \emph{file} dentro ad un \emph{path} specifico su OneDrive e di conseguenza invia un'approvazione notificata sia tramite Teams che Outlook.\\
+Dopo aver ricevuto la risposta il flusso agisce di conseguenza spostando il \emph{file} iniziale in un \emph{path} specifico in funzione dell'esito dell'approvazione. Viene in aggiunta eseguito un controllo sui \emph{file} già presenti nel percorso di destinazione e, nel caso fosse già presente un documento omonimo, il documento da spostare viene rinominato.\\
+Questo controllo avviene ciclicamente incrementando un valore posto nel nome del \emph{file} fino a che non si verifichi l'effettiva possibilità di eseguire lo spostamento.\\
+Infine viene eseguito uno \emph{script} Excel il quale scrive in una tabella di \emph{log} le informazioni relative allo spostamento.
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.5\columnwidth]{flussoApprovazioni} 
+    \caption{Flusso per testare condizioni, approvazioni ed esecuzione di \emph{script}.}
+    \label{fig:flussoApprovazioni}
+\end{figure}
+
+\noindent A fini illustrativi l'immagine mostra una versione semplificata del flusso descritto. Essa esclude il controllo della presenza di un \emph{file} omonimo e quindi non include il ciclo Do until e l'inizializzazione e modifica di variabili.\\
+Successivamente ho prodotto una presentazione PowerPoint al fine di esporre, al \emph{tutor} aziendale, le funzionalità, i lati positivi e i lati negativi delle tecnologie Power Automate e Power Apps, in funzione di quanto appreso durante la prima settimana di \emph{stage}.
+
+\subsection{Sviluppo DevOps}
+\subsubsection*{Plan}
+Le attività pratiche legate alla fase di pianificazione sono la configurazione degli ambienti Planner e Taiga e la loro condivisione e utilizzo con i membri del \emph{team} coinvolti.\\
+Inoltre, in collaborazione con lo stagista responsabile del progetto LINKDELPROGETTODIGIACOMO, abbiamo esplorato la possibilità di integrare i flussi Power Automate al fine di sostituire le logiche, realizzate tramite complessi \emph{scirpt}, responsabili per l'interazione e la sincronizzazione tra le due piattaforme di pianificazione.\\
+Per farlo abbiamo inoltre esplorato l'utilizzo dei \emph{webhooks}, ovvero degli strumenti \emph{web} che permettono di configurare l'invio automatico di chiamate \gls{http} di ritorno da parte di un'applicazione \emph{web} al fine di ricevere dati automaticamente al verificarsi di uno specifico evento.\\
+A causa delle limitazioni incontrate nell'utilizzo di servizi di \emph{webhooks} e della fine dello svolgimento dello \emph{stage} della persona con cui collaboravo, tali studi non hanno portato a soluzioni effettivamente utilizzate.
+
+\subsubsection*{Code}
+Le attività da me svolte al fine di predisporre la fase Code per la sua applicazione a progetti Power Automate e Power Apps comprendono principalmente la realizzazione e la documentazione del sistema di versionamento individuato in fase di progettazione e la documentazione e l'applicazione degli strumenti per l'analisi statica del codice identificati.\\
+Per il versionamento ho adattato, prima in un \emph{branch} di prova e poi nei restanti, il \emph{repository} Git dell'applicazione aziendale Report di visita in modo da rispecchiare le norme definite.\\
+Esse riguardano le regole da seguire per versionare il progetto e la struttura dei percorsi dei \emph{file}, divisi in base alla loro funzione.\\  
+Tali norme sono state definite con la collaborazione di parte del \emph{team} di sviluppo e dello stagista universitario responsabile del progetto LINKPROGETTOBROTTO.\\ 
+Per fare in modo di contenere nel \emph{repository} i \emph{file} relativi ai flussi Power Automate e le applicazioni Power Apps, è stata predisposta una cartella apposita al fine di contenere il pacchetto ZIP relativo alla Microsoft Solution del progetto.\\ 
+Tale pacchetto nel \emph{repository} assume valore in ottica di \emph{backup} e ripristino, nel caso in cui si necessitasse l'esecuzione di una specifica versione del progetto.\\  
+Per fare in modo che Power Apps riesca ad utilizzare la funzione integrata che gli permette di interfaccairsi con Git direttamente dalla sua interfaccia grafica, è necessario che nel \emph{repository} sia presente tale applicazione in un formato non compresso. È pertanto stato deciso di mantenere, per quanto ridondante, una copia dell'applicazione al fine di agevolare le fasi di sviluppo.\\ 
+Per l'analisi statica del codice ho esplorato altri strumenti esterni come l'applicazione di strumenti di analisi statica consolidati, ad esempio SonarQube, applicati tramite IDE esterni ai dati generati da Power Automate e Power Apps.\\  
+Inoltre ho constatato la possibilità di utilizzare gli strumenti diagnostici nativi di tali tecnologie anche tramite i comandi della Power Platform CLI in modo da automatizzare la raccolta dei risultati.\\ 
+Questa funzione risulta però superflua in quanto i risultati sono di più agevole fruizione con l'adozione di tali strumenti tramite l'interfaccia grafica durante le fasi di sviluppo, e perde di significato se, per verificare lo stato del proprio codice, è necessario eseguire uno \emph{script} e studiare un complicato \emph{file} JSON.\\ 
+I documenti “Norme di progetto” e “Analisi statica” sono stati redatti e sono stati condivisi con il \emph{team} di sviluppo e con il \emph{tutor} aziendale.\\  
+Inoltre ho prodotto una presentazione PowerPoint contenente le principali informazioni presenti nei documenti citati e l'ho esposta al \emph{team} di sviluppo. 
+
+\subsubsection*{Build}
+Ho prodotto il documento “Guida Jenkins”, il quale comprende tutte le nozioni e le norme relative all'adozione di Jenkins, al fine di applicare la fase Build a progetti Power Automate e Power Apps e l'ho condiviso con il \emph{team} di sviluppo e con il \emph{tutor} aziendale.\\  
+Per automatizzare l'esportazione delle Microsoft Solutions e il loro caricamento nel \emph{repository}, ho adottato un Multibranch Pipeline Job Jenkins. Il relativo Jenkinsfile prodotto esegue, tramite i propri Stage, le seguenti operazioni:
+\begin{itemize}
+    \item Seleziona il corretto \emph{branch} del \emph{repository} ed esegue un comando \emph{pull}
+    \item Cerca modifiche nella cartella relativa all'applicazione Power Apps
+    \item Esegue l'autenticazione Micorsoft tramite gli appositi comandi forniti dalla Power Platform CLI
+    \item Esporta la Microsoft Solutions
+    \item Controlla l'eventuale presenza di una omonima Solution già presente nel \emph{repository} e, se presente, la elimina 
+    \item Carica il pacchetto relativo alla nuova versione della Solution nel \emph{repository}\\
+\end{itemize}
+Al fine di collegare il Job Jenkins con il \emph{repository}, senza dover utilizzare \emph{token} di accesso GitHub personali, ho utilizzato la funzione che permette di generare “GitHub Apps”. Esse sono applicazioni integrate in GitHub che permettono il collegamento tra i \emph{repository} desiderati con altri specifici strumenti e servizi, definendone con precisione il livello di accesso e autorizzazioni.  
+
+\subsubsection*{Test}
+
+
+\subsubsection*{Release}
+
+
+\subsubsection*{Deploy}
+
+
+\subsubsection*{Operate}
+
+
+\subsubsection*{Monitor}
+
+
+\subsection{Sviluppo Angular}
+
+
+\subsection{Applicazioni aziendali}
+
+
+
 
 \section{Verifica e Validazione}
 In questa sezione sono presenti tutte le attività da me svolte al fine di verificare il corretto funzionamento delle soluzioni sviluppate e il loro soddisfacimento dei requisiti progettuali.
