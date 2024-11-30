@@ -162,22 +162,48 @@ Le Soluzioni preservano i loro dati, e quelli degli elementi in esse contenuti, 
 Tale adozione permette di usufruire di funzionalità altrimenti assenti. Le conseguenze del loro utilizzo e le motivazioni che mi hanno portato ad utilizzare questa tecnologia sono materia di discussione presente nel capitolo 3.2 Progettazione.\\
 
 \subsection{DevOps}
-
+Prima di poter progettare una soluzione applicativa al fine di applicare le fasi di \gls{DevOps} a progetti realizzati con Power Automate e Power Apps, ho analizzato e compreso quali fossero le implicazioni di ogni \emph{step}.\\
+Ho approfondito tale pratica soprattutto studiando gli approfondimenti presenti sul sito \emph{web} di Atlassian, nota compagnia di \emph{software enterprise}, e dalla teoria sul ciclo di vita del \emph{software} e sulle metodologie di automazione dei processi aziendali appresa durante il percorso di studi universitario.\\
+Ho inoltre studiato i documenti di sviluppo sicuro aziendali, nei quali sono presenti delle linee guida su come adottare il \gls{DevOps} in Wintech.\\
+Le sue fasi sono:
 \subsubsection*{Plan}
+Essendo la fase iniziale del ciclo, ha lo scopo di definire i requisiti, pianificare il ciclo di vita del progetto e identificarne le metodologie di lavoro. Adottando una metodologa iterativa, è consono che la pianificazione e le conseguenti fasi successive, possano subire modifiche rispetto alle precedenti pianificazioni.
 
 \subsubsection*{Code}
+Dopo aver compreso cosa e come soddisfare i requisiti progettuali, vengono sviluppate le soluzioni individuate seguendo le metodologie e le norme definite in fase Plan.\\
+Essendo il progetto di \emph{stage} basato su tecnologie non sviluppabili tramite strumenti tradizionali, come IDE non proprietari e linguaggi di programmazione consolidati, l'analisi della fase Code è stata necessaria per comprendere le funzionalità disponibili agli utenti al fine di sviluppare tali prodotti.\\
+È compresa in questa fase anche la ricerca avvenuta al fine di individuare le metodologie e gli strumenti adatti a sviluppare progetti con le tecnologie in oggetto in maniera collaborativa e adottando un efficace metodo di versionamento.\\
+Questo ha necessitato di uno studio sullo strumento Git, già ampiamente affrontato durante il percorso di studi universitari.\\
+Infine, è compresa nella fase Code anche l'attività di analisi statica del codice, la quale supporta le fasi di sviluppo identificando e segnalando eventuali errori nel codice sorgente senza la necessità di eseguirlo.
 
 \subsubsection*{Build}
+Fase relativa alla creazione dei pacchetti e dei \emph{file} eseguibili costruiti partendo dal codice sorgente prodotto nella fase precedente.\\
+Il risultato di questa operazione rappresenta il prodotto sul quale verranno effettuati i \emph{test} e le verifiche necessarie. 
 
 \subsubsection*{Test}
+Ottenuto l'artefatto generato dalla fase Build, esso può essere tastato mediante l'utilizzo di svariati strumenti appositi.\\
+Essi comprendono diversi tipi di \emph{test} dinamici: 
+\begin{itemize}
+    \item Test di unità: verifica che le singole unità di codice, per esempio funzioni, metodi o classi, funzionino come previsto.
+    \item Test di integrazione: verifica che più parti di codice o servizi interagiscano tra loro correttamente.
+    \item Test di carico: verifica il comportamento del sistema sotto carico normale ed elevato.
+    \item Test di sicurezza: individua le eventuali vulnerabilità o minacce di sicurezza presenti nel sistema. 
+\end{itemize}
+Durante le fasi analitiche del mio \emph{stage}, ha avuto molta rilevanza lo studio sui metodi nativi ed esterni applicabili ai flussi Power Automate e alle applicazioni Power Apps al fine di applicare \emph{test}. 
 
 \subsubsection*{Release}
+Quando il prodotto è stato creato e testato, esso è considerato pronto per essere reso disponibile ai clienti.\\
+Esso viene quindi rilasciato identificandone una versione specifica.
 
 \subsubsection*{Deploy}
+Una versione rilasciata del prodotto viene distribuita nello specifico ambiente di produzione in cui gli utenti finali lo utilizzeranno, garantendone il corretto funzionamento.
 
 \subsubsection*{Operate}
+La gestione e il funzionamento dell'applicazione in produzione viene garantitala tramite attività come l'amministrazione e la manutenzione dei \emph{server} e la risoluzione dei problemi. 
 
 \subsubsection*{Monitor}
+Al fine di garantire affidabilità e buone prestazioni del sistema distribuito, il suo comportamento viene osservato tramite strumenti che ne raccolgono e analizzano i dati. 
+Vengono inoltre raccolti i \emph{feedback} degli utenti finali e dei clienti al fine di migliorare la qualità del prodotto. 
 
 \subsection{Applicazioni aziendali}
 Oltre all'analisi avvenuta sulle tecnologie al fine di raggiungere gli obiettivi riguardanti la ricerca sull'effettiva applicabilità delle pratiche di \gls{DevOps} ai progetti realizzati con Power Automate e Power Apps, è stato fin da subito definito che avrei alternato tali attività con fasi di sviluppo su applicazioni aziendali.\\  
