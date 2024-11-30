@@ -1,13 +1,13 @@
 \chapter{Svolgimento stage}
 \label{cap:svolgimentoStage}
-In questo capitolo vengono descritte tutte le attività da me svolte durante lo \emph{stage}, divise nelle sezioni “Analisi”, “Progettazione”, “Programmazione” e “Verifica e validazione”, in modo da fornire una panoramica chiara e strutturata del lavoro svolto, evidenziando il processo seguito e le competenze acquisite in ciascuna fase.\\
+In questo capitolo vengono descritte tutte le attività da me svolte durante lo \emph{stage}, divise nelle sezioni "Analisi", "Progettazione", "Programmazione" e "Verifica e validazione", in modo da fornire una panoramica chiara e strutturata del lavoro svolto, evidenziando il processo seguito e le competenze acquisite in ciascuna fase.\\
 Esse non sono intese come completamente sequenziali bensì, fin dalla prima fase, sono presenti tutte le attività correlate in modo da coprire l'intero periodo di \emph{stage}.\\
 \section{Analisi}
 In questa sezione sono presenti tutte le attività analitiche da me svolte e il suo scopo è descrivere le modalità con cui ho compreso i bisogni, i requisiti e le tecnologie del mio progetto di \emph{stage}.\\
 Essendo quest'ultimo focalizzato per la maggior parte su attività legate alla ricerca e all'esplorazione tecnologica, la fase di analisi rappresenta la parte più corposa delle mie attività.\\
 
 \subsection{Requisiti}
-I requisiti del mio \emph{stage}, derivanti in parte dalle dichiarazioni aziendali presenti nel documento “Progetto Formativo” generato all'inizio del suo svolgimento, e in parte conseguenza dell'analisi dei requisiti avvenuta in corrispondenza con la presenza di specifiche necessità progettuali, sono divisi in categorie:
+I requisiti del mio \emph{stage}, derivanti in parte dalle dichiarazioni aziendali presenti nel documento "Progetto Formativo" generato all'inizio del suo svolgimento, e in parte conseguenza dell'analisi dei requisiti avvenuta in corrispondenza con la presenza di specifiche necessità progettuali, sono divisi in categorie:
 \begin{enumerate}
 	\item[O -]requisiti obbligatori, vincolanti in quanto obiettivi primari richiesti dall'azienda.
     \item[D -]requisiti desiderabili, non strettamente necessari ma dal riconoscibile valore aggiunto.
@@ -50,10 +50,10 @@ Essi sono:
 \subsection{Ambiente di lavoro}
 Durante i primi giorni dello \emph{stage} sono stato introdotto all'ambiente di lavoro e alle tecnologie di comunicazione e collaborazione.\\
 Conseguentemente ho analizzato e utilizzato il sistema di messaggistica basato su Microsoft Teams e Outlook e ho compreso la struttura di condivisione dei dati, utilizzata in azienda, basata sullo strumento Microsoft SharePoint.\\
-Esso è una piattaforma \emph{software} in grado di organizzare dati sottoforma di \emph{file} e strutture tabellari chiamate “Liste”, al fine di gestire il materiale condiviso dall'azienda e dai singoli \emph{team} tramite un sistema di accessi e autorizzazioni.\\
+Esso è una piattaforma \emph{software} in grado di organizzare dati sottoforma di \emph{file} e strutture tabellari chiamate "Liste", al fine di gestire il materiale condiviso dall'azienda e dai singoli \emph{team} tramite un sistema di accessi e autorizzazioni.\\
 
 Tramite questi strumenti ho studiato i documenti aziendali a me forniti in modo da comprendere i principali processi produttivi di Wintech.\\ 
-Tali documenti comprendono i “Documenti di sviluppo sicuro” e includono:
+Tali documenti comprendono i "Documenti di sviluppo sicuro" e includono:
 \begin{itemize}
     \item Agile e SCRUM: descrizione delle metodologie Agile e SCRUM, spiegazione dei ruoli necessari e delle cerimonie previste. 
     \item Presentazione sviluppo sicuro: presentazione PowerPoint che descrive i processi aziendali atti a migliorare la qualità dei prodotti realizzati automatizzando fasi ripetitive e rispettando criteri di sicurezza. 
@@ -88,20 +88,20 @@ Essi sono direttamente accessibili dalla \emph{home} di Power Automate e Power A
 
 \noindent Lo studio di tali moduli mi ha permesso di comprendere il funzionamento e le \emph{features} principali di Power Automate:\\
 Esso è formato da una pagina \emph{web} che offre controllo sui flussi di automazione creati: è possibile modificarli e visualizzarne i dettagli, le esecuzioni e le statistiche. È possibile creare dei nuovi flussi partendo da altri progetti pubblici, o a noi condivisi, e modelli offerti da Microsoft da adattare alle proprie esigenze.\\
-La modifica di un flusso non avviene mediante la scrittura di codice tramite un linguaggio di programmazione bensì tramite una composizione “a blocchi” personalizzabili collegati tra loro ciascuno avente proprietà e attributi definiti.\\
+La modifica di un flusso non avviene mediante la scrittura di codice tramite un linguaggio di programmazione bensì tramite una composizione "a blocchi" personalizzabili collegati tra loro ciascuno avente proprietà e attributi definiti.\\
 Essi sono selezionabili da una lista di blocchi relativi ciascuno a una funzionalità specifica di un servizio Microsoft.\\
-Tali blocchi possono essere “Trigger” o “Azioni” ed entrambi sono necessari per la creazione e il funzionamento di un flusso.\\ 
+Tali blocchi possono essere "Trigger" o "Azioni" ed entrambi sono necessari per la creazione e il funzionamento di un flusso.\\ 
 In ogni flusso è presente uno e un solo Trigger il quale rappresenta il suo punto di partenza nonché la condizione che scaturisce la sua esecuzione.\\
 Esistono tre tipologie principali di Trigger le quali determinano la tipologia stessa di ogni flusso:
 \begin{itemize}
-    \item Automatico: per esempio “SharePoint - Quando viene creato un elemento”. 
-    \item Istantaneo: per esempio “Attiva manualmente un flusso”.
-    \item Pianificato: per esempio “Ricorrenza”, il quale attiva il flusso periodicamente.\\
+    \item Automatico: per esempio "SharePoint - Quando viene creato un elemento". 
+    \item Istantaneo: per esempio "Attiva manualmente un flusso".
+    \item Pianificato: per esempio "Ricorrenza", il quale attiva il flusso periodicamente.\\
 \end{itemize}
 
-\noindent Ad ogni Trigger possono essere collegate, in serie o in parallelo, una moltitudine di Azioni, ciascuna responsabile di uno specifico compito, per esempio sono presenti le azioni “Inizializza variabile”, “Avvia e attendi un'approvazione”, “Teams - Crea una chat” e “Outlook - Invia un messaggio di posta elettronica”.\\
-Sono inoltre presenti azioni dedicate alla gestione logica dei flussi come “Condizione" e “Do until”. La prima rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con “if”, responsabile della ramificazione dell'esecuzione del flusso in base a una condizione specifica.\\
-La seconda rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con “Do while”, responsabile della ripetizione condizionata di un insieme di azioni garantendone sempre la prima esecuzione.
+\noindent Ad ogni Trigger possono essere collegate, in serie o in parallelo, una moltitudine di Azioni, ciascuna responsabile di uno specifico compito, per esempio sono presenti le azioni "Inizializza variabile", "Avvia e attendi un'approvazione", "Teams - Crea una chat" e "Outlook - Invia un messaggio di posta elettronica".\\
+Sono inoltre presenti azioni dedicate alla gestione logica dei flussi come "Condizione" e "Do until". La prima rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con "if", responsabile della ramificazione dell'esecuzione del flusso in base a una condizione specifica.\\
+La seconda rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con "Do while", responsabile della ripetizione condizionata di un insieme di azioni garantendone sempre la prima esecuzione.
 \begin{figure}[htbp] 
     \centering 
     \includegraphics[width=0.5\columnwidth]{esempioFlusso} 
@@ -110,9 +110,9 @@ La seconda rappresenta la struttura di controllo rappresentata nei classici ling
 \end{figure}
 \noindent Successivamente è emersa, da parte del tutor aziendale, la necessità di integrare i flussi Power Automate con il \emph{software} gestionale WOW e gli altri prodotti aziendali al fine di poter integrare le funzionalità desiderate con libertà mantenendo coordinate le diverse parti del prodotto.\\
 Sono emersi quindi due requisiti: il primo, utile per apprendere le tecnologie in oggetto, è relativo alla creazione di un flusso che automatizzi un processo approvativo.\\
-Il secondo, più concreto e integrabile con i prodotti aziendali, è basato sull'applicazione, ai flussi Power Automate, di chiamate \gls{http}(Hypertext Transfer Protocol): in italiano “protocollo di trasferimento ipertestuale” è un protocollo di rete, ovvero un insieme di regole formalmente descritte che definiscono le modalità di comunicazione tra due o più apparecchiature elettroniche, usato come principale sistema per la trasmissione d'informazioni sul \emph{web}.\\
-Esse permettono la comunicazione e lo scambio di dati tra flussi Power Automate e altri flussi o applicazioni: esiste infatti la possibilità di richiamare lo specifico Trigger “Alla ricezione di una richiesta HTTP” il quale genera un personale URL (Uniform Resource Locator), ovvero una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di \emph{computer}.\\
-In seguito è possibile utilizzare la corrispondente azione “Response” al fine di rispondere al chiamante con l'\emph{output} della richiesta.
+Il secondo, più concreto e integrabile con i prodotti aziendali, è basato sull'applicazione, ai flussi Power Automate, di chiamate \gls{http}(Hypertext Transfer Protocol): in italiano "protocollo di trasferimento ipertestuale" è un protocollo di rete, ovvero un insieme di regole formalmente descritte che definiscono le modalità di comunicazione tra due o più apparecchiature elettroniche, usato come principale sistema per la trasmissione d'informazioni sul \emph{web}.\\
+Esse permettono la comunicazione e lo scambio di dati tra flussi Power Automate e altri flussi o applicazioni: esiste infatti la possibilità di richiamare lo specifico Trigger "Alla ricezione di una richiesta HTTP" il quale genera un personale URL (Uniform Resource Locator), ovvero una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di \emph{computer}.\\
+In seguito è possibile utilizzare la corrispondente azione "Response" al fine di rispondere al chiamante con l'\emph{output} della richiesta.
 \subsubsection*{Power Apps}
 I flussi Power Automate portano grande vantaggio in termini di efficienza dei processi aziendali e possono aumentare il numero di funzionalità di un'applicazione.\\
 Per questo motivo il loro utilizzo assume maggiore significato quando associato alla realizzazione di applicazioni Power Apps, le quali sono pensate per integrare nativamente i flussi creati.\\
@@ -127,7 +127,7 @@ Lo sviluppo di tali applicazioni non avviene esclusivamente mediante codice di p
     \vspace{1mm}
     Fonte: \url{https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/using-tree-view-on-form}.
 \end{figure}
-\newpage \noindent Al fine di modificare i parametri che lo compongono, ciascun componente può essere personalizzato tramite un'apposita finestra dell'interfaccia grafica. Questo non comprende solo le peculiarità grafiche ma soprattutto il loro comportamento a seguito di azioni specifiche: per esempio è possibile creare un componente “Pulsante” e personalizzarne il campo “OnSelect” al fine di eseguire conseguentemente un flusso Power Automate e inviarne i dati di \emph{output} ad un altro componente.\\
+\newpage \noindent Al fine di modificare i parametri che lo compongono, ciascun componente può essere personalizzato tramite un'apposita finestra dell'interfaccia grafica. Questo non comprende solo le peculiarità grafiche ma soprattutto il loro comportamento a seguito di azioni specifiche: per esempio è possibile creare un componente "Pulsante" e personalizzarne il campo "OnSelect" al fine di eseguire conseguentemente un flusso Power Automate e inviarne i dati di \emph{output} ad un altro componente.\\
 Tali istruzioni vengono definite utilizzando Microsoft Power Fx, il quale rappresenta un linguaggio di programmazione dichiarativo, fortemente tipizzato e con uso limitato di codice, usato in Microsoft Power Platform.\\
 Quest'ultima piattaforma include un insieme di strumenti e tecnologie, compresi Power Automate e Power Apps, pensati per offrire la possibilità di sviluppare prodotti \emph{software} con limitata necessità di scrivere, e conoscere, codice tramite linguaggi di programmazione.\\
 
@@ -136,9 +136,9 @@ In questo sottocapitolo vengono descritti i metodi di apprendimento e le nozioni
 \subsubsection*{Jenkins}
 Al fine di applicare le automazioni necessarie per adottare al \emph{software} le metodologie \gls{DevOps}, come richiesto dagli obiettivi di \emph{stage}, ho individuato lo strumento Jenkins in quanto esso rispecchia perfettamente le mie necessità ed è inoltre già conosciuto e applicato dal resto del \emph{team} di sviluppo rappresentando quindi una tecnologia consolidata che non necessita di ulteriore formazione all'interno dell'azienda.\\
 Ho appreso le conoscenze necessarie per studiare e utilizzare tale strumento in totale autonomia mediante la consultazione delle guide e del numeroso materiale presente \emph{online} comprese le pagine \emph{web} ufficiali di Jenkins con gli annessi video \emph{tutorial}.\\
-Esso è uno strumento scritto in linguaggio di programmazione Java che viene eseguito all'interno di un \emph{web server} e offre la possibilità di creare, gestire, eseguire e monitorare dei progetti Jenkins chiamati “Job”, potendone visionare e registrare i \emph{report} di \emph{output}.\\
+Esso è uno strumento scritto in linguaggio di programmazione Java che viene eseguito all'interno di un \emph{web server} e offre la possibilità di creare, gestire, eseguire e monitorare dei progetti Jenkins chiamati "Job", potendone visionare e registrare i \emph{report} di \emph{output}.\\
 Essi sono unità di lavoro configurabili che rappresentano un'attività o un progetto specifico che Jenkins esegue. Possono essere di diverso tipo ma tutti sono basati sull'esecuzione di uno \emph{script} o una \emph{pipeline} di automazione.\\
-Una \emph{pipeline} Jenkins è una sequenza di fasi chiamate “Stage”, eseguite in serie o in parallelo, responsabili di specifiche operazioni definite dall'utente, per esempio \emph{build}, \emph{test}, \emph{deploy}. Esse possono essere definite tramite il linguaggio di programmazione Groovy oppure tramite l'interfaccia grafica di Jenkins.\\
+Una \emph{pipeline} Jenkins è una sequenza di fasi chiamate "Stage", eseguite in serie o in parallelo, responsabili di specifiche operazioni definite dall'utente, per esempio \emph{build}, \emph{test}, \emph{deploy}. Esse possono essere definite tramite il linguaggio di programmazione Groovy oppure tramite l'interfaccia grafica di Jenkins.\\
 Questo strumento permette dunque di fornire servizi di integrazione continua ed è indicato per l'applicazione di alcune fasi di \gls{DevOps} come Build e Test, il caricamento automatico dei file sul \emph{repository} di versionamento desiderato e l'autenticazione automatica ai servizi Microsoft tramite comandi Power Platform CLI.\\
 Quest'ultima è un'interfaccia a riga di comando che offre la possibiltà di eseguire un insieme di comandi specifici atti all'autenticazione e alla gestione degli ambienti e delle Microsoft Solutions.\\
 \begin{figure}[htbp] 
@@ -255,8 +255,109 @@ Esso è un \emph{framework} per la realizzazione di applicazioni \emph{web} tram
 Tramite il sito \emph{web} ufficiale di Angular, ho seguito le guide fornite in modo da apprenderne le basi e poter realizzare quanto richiesto soddisfacendo i requisiti assegnati.\\
 
 \section{Progettazione}
-In questa sezione sono presenti tutte le attività progettuali da me svolte e il suo scopo è descrivere le modalità con cui ho individuato le soluzioni ai bisogni progettuali in modo da soddisfarne i requisiti.
-\subsubsection*{Microsoft Solutions}
+In questa sezione sono presenti tutte le attività di progettazione da me svolte e il suo scopo è descrivere le modalità con cui ho individuato le soluzioni ai bisogni progettuali in modo da soddisfarne i requisiti.
+\subsection{Scope di Power Automate e Power Apps}
+A seguito dell'analisi avvenuta sulle tecnologie oggetto di \emph{stage} è stato possibile identificare il compito che Power Automate e Power Apps devono avere all'interno di un progetto. 
+Esse sono infatti tecnologie pensate per sviluppare in maniera rapida soluzioni relativamente semplici. Nel momento in cui ci fosse la necessità di applicare logiche molto complesse o integrazione con servizi esterni dalla \emph{suite} Microsoft, tali strumenti non sono più ideali in quanto si incomberebbe in numerosi vincoli tecnologici e difficoltà di integrazione.
+Questo è un fattore importante da considerare nelle fasi di progettazione di un progetto.\\
+
+\subsection{Individuazione delle soluzioni tecnologiche}
+In questa sottosezione vengono esplicitate le motivazioni che mi hanno portato a identificare determinate soluzioni al fine di soddisfare i requisiti compresi in fase di analisi.
+
+\subsubsection*{Adozione delle Microsoft Solutions}
+L'adozione delle Soluzioni, essendo esse basate sul sistema di archiviazione Dataverse, comporta la possibilità aggiuntiva di poter visionare la "Version history" dei flussi Power Automate. Tale funzionalità è in grado di ripristinare specifiche versioni precedenti dei flussi, agevolando le fasi di sviluppo.
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.8\columnwidth]{versionHistory} 
+    \caption{Funzionalità Version history nei flussi Power Automate.}
+    \label{fig:versionHistory}
+\end{figure}
+\newline \noindent Inoltre, essendo i componenti di una Soluzione contenuti in un unico pacchetto esportabile, la gestione dei progetti così organizzati risulta più agevole, soprattutto nelle fasi Build, Code e Deploy. 
+
+\subsubsection*{Job Jenkins}
+Riguardo alla scelta del tipo di Job da adottare in Jenkins, è stata individuato il "Multibranch Pipeline Job". Esso permette di collegare un \emph{repository} Git e ha la possibilità di gestire automaticamente una \emph{pipeline} indipendente, contenuta in un apposito file chiamato "Jenkinsfile", per ogni \emph{branch}.\\
+Tale Job ha inoltre la possibilità di eseguire automaticamente i Jenkinsfile corrispondenti solo ai \emph{branch} in cui è avvenuta una modifica, rendendo questo strumento ideale per la gestione di progetti Git.\\
+
+\subsection{Soluzioni individuate per le fasi DevOps}
+\subsubsection*{Plan}
+Come strumenti identificati per la pianificazione delle attività sono stati utilizzati Planner e Taiga.\\
+Essi permettono di categorizzare tutte le attività da assegnare al \emph{team} di sviluppo tramite \emph{tag} e contenitori specifici, i quali definiscono lo stato di avanzamento dei lavori.\\
+Nello specifico Planner viene utilizzato solo dal responsabile di progetto e serve a tenere traccia dei casi d'uso, mentre Taiga si occupa di tracciare i \emph{task} più specifici assegnati ai membri del \emph{team}, il quale si occupa di organizzarli.
+
+\subsubsection*{Code}
+Il versionamento di tutte le parti dei progetti realizzati con Power Apps e Power Automate è avvenuto in un singolo \emph{repository} Git in modo da garantire una migliore organizzazione dei dati e facilità di ripristino di specifiche versioni.\\
+Per il lavoro collaborativo è stata individuata la \emph{feature} che integra il collegamento ad un \emph{repository} Git con Power Apps e permette di fare \emph{commit} e \emph{push} automaticamente.\\
+Il \emph{repository} è diviso nei \emph{branch} "Main" per le versioni funzionanti e stabili del prodotto, "Develop" per il prodotto ancora in fase di sviluppo e diversi \emph{feature branch} utilizzati dai singoli sviluppatori per apportare modifiche limitate a singole funzioni. 
+Per applicare a tali progetti l'analisi statica del codice, ho individuato come soluzione l'utilizzo degli strumenti nativi offerti da Microsoft:
+\begin{itemize}
+    \item Verifica flusso: permette l'esecuzione di un controllo sul codice e la visualizzazione di errori sul flusso come i campi obbligatori mancanti, gli \emph{input} non validi o i problemi legati alle licenze. 
+    \item Verifica app: permette l'esecuzione di un controllo sul codice e la visualizzazione di errori sull'applicazione come formule Fx non valide, problemi di accessibilità o problemi legati alle origini dati. 
+    \item Verifica soluzione: più dettagliata delle precedenti, permette l'esecuzione di un controllo sul codice e la visualizzazione di errori sui componenti della Soluzione. 
+\end{itemize}
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.6\columnwidth]{verificaApp} 
+    \caption{Funzionalità Verifica App nelle applicazioni Power Apps.}
+    \label{fig:verificaApp}
+\end{figure}
+
+\noindent Gli strumenti di analisi statica esterni non sono stati utilizzati poiché, a seguito di \emph{test} esplorativi e attività di ricerca in merito, è emersa l'eccessiva difficoltà nell'integrazione di qualsiasi strumento non offerto da Microsoft, ai file generati dai flussi Power Apps e alle applicazioni Power Automate. 
+
+\subsubsection*{Build}
+I \emph{file} generati da Power Automate e Power Apps al fine di rappresentare i flussi e le applicazioni create nelle rispettive interfacce di sviluppo, sono rappresentati da un pacchetto compresso ZIP contenente i file generati automaticamente da tali programmi.\\
+Essi sono principalmente di tipo JSON, e msapp e possiedono una struttura di difficile comprensione, pertanto non sono pensati per uno sviluppo manuale diretto.\\
+Le Microsoft Solution sono rappresentate dai \emph{file} corrispondenti a quelli dei flussi e delle applicazioni in esse contenuti e nessuno di questi componenti possiede un file eseguibile.\\
+Come metodo per l'esecuzione della fase Build automatica, ho individuato i comandi forniti dalla Power Platform CLI, automatizzati da un Job Jenkins, al fine di esportare i pacchetti relativi alle Soluzioni desiderate. 
+
+\subsubsection*{Test}
+A causa della natura dei pacchetti di dati generati con la fase Build è emerso, similmente all'analisi statica del codice, la necessità di utilizzare principalmente gli strumenti nativi forniti da Microsoft per eseguire \emph{test} dinamici. 
+Per i flussi Power Automate è disponibile la funzione "Test" presente nell'interfaccia grafica di sviluppo. Essa permette l'esecuzione del flusso e la visione dei suoi risultati compresi gli \emph{input} e \emph{output} di ogni azione e il loro tempo di esecuzione. 
+Inoltre, in caso di errore, sono fornite le relative informazioni. 
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=1\columnwidth]{testFlusso} 
+    \caption{Funzionalità Test nei flussi Power Automate.}
+    \label{fig:testFlusso}
+\end{figure}
+
+\newpage \noindent Per eseguire \emph{test} esclusivamente su una specifica parte di un flusso Power Automate, simulando il comportamento delle azioni ad essa connesse, è disponibile la funzione "Static Result". Essa permette un maggiore controllo sull'esecuzione del flusso durante i \emph{test} e l'azzeramento dei tempi di esecuzione di azioni che non rappresentano il suo \emph{focus}.\\
+È inoltre stata individuata la possibilità di utilizzare i Trigger e le Azioni Power Automate legate all'utilizzo delle chiamate \gls{http}, al fine di estrapolare i dati di \emph{output} di un flusso ed elaborarli in uno \emph{script} esterno realizzato con l'ambiente Node.js, il quale sfrutta il linguaggio JavaScript. Maggiori informazioni su quanto sviluppato per questa soluzione sono presenti nel capitolo 3.3 Programmazione.\\\\
+Per quanto concerne i \emph{test} su applicazioni Power Apps, sono presenti diversi strumenti nativi per verificare la loro corretta esecuzione. "Test studio" è uno strumento che permette di eseguire l'applicazione e registrare tutte le azioni intraprese dall'utente (o definite manualmente) al fine di generare uno \emph{script} di \emph{test} che possa ripetere tali azioni e fornire un riscontro.\\
+Attualmente l'utilizzo di Test studio non è conveniente a causa del numero considerevole delle sue limitazioni:
+il suo funzionamento è limitato solo a componenti "classici", ovvero una lista di componenti presenti su Power Apps prima dell'arrivo dei componenti "moderni". Esclude inoltre l'uso di componenti \emph{custom} e non è compatibile con l'integrazione nativa tra Power Apps e Git.\\\\    
+Per questi motivi la metodologia identificata per permettere il \emph{testing} ad applicazioni Power Apps è la funzionalità "Visualizza l'anteprima dell'app", con la quale è possibile eseguirla e verificarne il corretto funzionamento.\\
+Nel caso in cui si verificassero degli errori durante tale operazione, i loro dettagli possono essere visualizzati. 
+
+\subsubsection*{Release}
+La strategia identificata per definire i rilasci è l'assegnazione di specifici \emph{tag} alfanumerici ai \emph{commit} nel \emph{repository} Git.\\
+Tale codice è composto dalla lettera "v" seguita da tre cifre separate da un carattere ".", per esempio "v1.0.0".\\
+Il criterio di avanzamento delle cifre è: 
+\begin{itemize}
+    \item Avanzamento della prima cifra: sono avvenute modifiche architetturali che alterano significativamente le funzionalità previste ad alto livello.\\
+    Esempio: sostituzione di una tecnologia fondamentale per il funzionamento di un programma, cambiamento radicale dei casi d'uso individuati.  
+    \item Avanzamento della seconda cifra: sono avvenute modifiche che alterano le funzionalità previste ad alto livello o ne aggiungono di nuove.\\
+    Esempio: modifiche che soddisfano i requisiti di un caso d'uso non ancora risolto, aggiunta di classi in uno \emph{script} che alterano il comportamento precedente del programma, aggiunta di una nuova scheda di un'applicazione.
+    \item Avanzamento della terza cifra: sono avvenute modifiche che non alterano significativamente le funzionalità previste ad alto livello.\\
+    Esempio: \emph{Bug fix}, sostituzione di un componente di un'applicazione al fine di ottenere il medesimo risultato precedentemente atteso. 
+\end{itemize}
+
+\subsubsection*{Deploy}
+Power Apps, Power Automate e le Micorsoft Solutions permettono non solo di esportare i pacchetti relativi ai propri progetti, ma anche di importarne di altri.\\
+In tale funzione ho individuato il metodo per distribuire tali prodotti negli ambienti di produzione. 
+
+\subsubsection*{Operate}
+L'operatività delle soluzioni implementate viene monitorata tramite il \emph{feedback} fornito dal cliente. Nel caso in cui si verificasse un problema con tale prodotto, viene fornita immediato supporto al fine di soddisfare nuovamente le attese.\\
+Nel caso in cui il problema riscontrato fosse molto problematico, il sistema di verisonamento definito permette il ripristino del prodotto ad una precedente versione stabile. 
+
+\subsubsection*{Monitor}
+Il monitoraggio dei \emph{report} Jenkins, delle esecuzioni dei flussi Power Automate e delle esecuzioni delle applicazioni Power Apps sono nativamente forniti dai rispettivi servizi. Tramite le interfacce disponibili è possibile vedere le informazioni sufficienti ad identificare eventuali problemi e "colli di bottiglia". 
+
+\subsubsection*{Applicazioni aziendali} 
+Le fasi di progettazione relative alle applicazioni aziendali su cui ho lavorato sono state limitate alla scelta delle strategie da esplorare per risolvere i problemi emersi. Questo perché tali applicazioni erano già presenti da tempo al momento del mio arrivo in azienda.\\
+Eccezione è fatta per l'applicazione Non conformità che, a differenza delle altre, era nelle sue prime fasi di sviluppo.\\
+Al fine di comprenderne gli obiettivi ho preso parte a dei \emph{meeting} dedicati con il \emph{tutor} aziendale e la parte del \emph{team} di sviluppo coinvolta.\\ 
+Ho in seguito contribuito a progettare l'aspetto grafico e le soluzioni atte a soddisfarne i requisiti ma il mio periodo di \emph{stage} è terminato prima che io potessi iniziare il loro sviluppo.  
+ 
 
 \section{Programmazione}
 In questa sezione sono presenti tutte le attività da me svolte al fine di sviluppare e implementare le soluzioni individuate in fase di progettazione.
