@@ -104,11 +104,11 @@ Sono inoltre presenti azioni dedicate alla gestione logica dei flussi come "Cond
 La seconda rappresenta la struttura di controllo rappresentata nei classici linguaggi di programmazione con "Do while", responsabile della ripetizione condizionata di un insieme di azioni garantendone sempre la prima esecuzione.
 \begin{figure}[htbp] 
     \centering 
-    \includegraphics[width=0.5\columnwidth]{esempioFlusso} 
+    \includegraphics[width=0.6\columnwidth]{esempioFlusso} 
     \caption{Esempio di un flusso Power Automate istantaneo.}
     \label{fig:esempioFlusso}
 \end{figure}
-\noindent Successivamente è emersa, da parte del tutor aziendale, la necessità di integrare i flussi Power Automate con il \emph{software} gestionale WOW e gli altri prodotti aziendali al fine di poter integrare le funzionalità desiderate con libertà mantenendo coordinate le diverse parti del prodotto.\\
+\newline \noindent Successivamente è emersa, da parte del tutor aziendale, la necessità di integrare i flussi Power Automate con il \emph{software} gestionale WOW e gli altri prodotti aziendali al fine di poter integrare le funzionalità desiderate con libertà mantenendo coordinate le diverse parti del prodotto.\\
 Sono emersi quindi due requisiti: il primo, utile per apprendere le tecnologie in oggetto, è relativo alla creazione di un flusso che automatizzi un processo approvativo.\\
 Il secondo, più concreto e integrabile con i prodotti aziendali, è basato sull'applicazione, ai flussi Power Automate, di chiamate \gls{http}(Hypertext Transfer Protocol): in italiano "protocollo di trasferimento ipertestuale" è un protocollo di rete, ovvero un insieme di regole formalmente descritte che definiscono le modalità di comunicazione tra due o più apparecchiature elettroniche, usato come principale sistema per la trasmissione d'informazioni sul \emph{web}.
 \subsubsection*{Power Apps}
@@ -285,16 +285,16 @@ Nello specifico Planner viene utilizzato solo dal responsabile di progetto e ser
 \subsubsection*{Code}
 Il versionamento di tutte le parti dei progetti realizzati con Power Apps e Power Automate è avvenuto in un singolo \emph{repository} Git in modo da garantire una migliore organizzazione dei dati e facilità di ripristino di specifiche versioni.\\
 Per il lavoro collaborativo è stata individuata la \emph{feature} che integra il collegamento ad un \emph{repository} Git con Power Apps e permette di fare \emph{commit} e \emph{push} automaticamente.\\
-Il \emph{repository} è diviso nei \emph{branch} "Main" per le versioni funzionanti e stabili del prodotto, "Develop" per il prodotto ancora in fase di sviluppo e diversi \emph{feature branch} utilizzati dai singoli sviluppatori per apportare modifiche limitate a singole funzioni. 
+Il \emph{repository} è diviso nei \emph{branch} "Main" per le versioni funzionanti e stabili del prodotto, "Develop" per il prodotto ancora in fase di sviluppo e diversi \emph{feature branch} utilizzati dai singoli sviluppatori per apportare modifiche limitate a singole funzioni.\\\\ 
 Per applicare a tali progetti l'analisi statica del codice, ho individuato come soluzione l'utilizzo degli strumenti nativi offerti da Microsoft:
 \begin{itemize}
     \item Verifica flusso: permette l'esecuzione di un controllo sul codice e la visualizzazione di errori sul flusso come i campi obbligatori mancanti, gli \emph{input} non validi o i problemi legati alle licenze. 
     \item Verifica app: permette l'esecuzione di un controllo sul codice e la visualizzazione di errori sull'applicazione come formule Fx non valide, problemi di accessibilità o problemi legati alle origini dati. 
-    \item Verifica soluzione: più dettagliata delle precedenti, permette l'esecuzione di un controllo sul codice e la visualizzazione di errori sui componenti della Soluzione. 
+    \item Verifica soluzione: più dettagliata delle precedenti, permette l'esecuzione di un controllo sul codice e la visualizzazione di errori sui componenti della Soluzione.\\
 \end{itemize}
 \begin{figure}[htbp] 
     \centering 
-    \includegraphics[width=0.6\columnwidth]{verificaApp} 
+    \includegraphics[width=0.5\columnwidth]{verificaApp} 
     \caption{Funzionalità Verifica App nelle applicazioni Power Apps.}
     \label{fig:verificaApp}
 \end{figure}
@@ -319,10 +319,10 @@ Inoltre, in caso di errore, sono fornite le relative informazioni.
 \end{figure}
 
 \newpage \noindent Per eseguire \emph{test} esclusivamente su una specifica parte di un flusso Power Automate, simulando il comportamento delle azioni ad essa connesse, è disponibile la funzione "Static Result". Essa permette un maggiore controllo sull'esecuzione del flusso durante i \emph{test} e l'azzeramento dei tempi di esecuzione di azioni che non rappresentano il suo \emph{focus}.\\
-È inoltre stata individuata la possibilità di utilizzare i Trigger e le Azioni Power Automate legate all'utilizzo delle chiamate \gls{http}, al fine di estrapolare i dati di \emph{output} di un flusso ed elaborarli in uno \emph{script} esterno realizzato con l'ambiente Node.js, il quale sfrutta il linguaggio JavaScript. Maggiori informazioni su quanto sviluppato per questa soluzione sono presenti nel capitolo 3.3 Programmazione.\\\\
+È inoltre stata individuata la possibilità di utilizzare i Trigger e le Azioni Power Automate legate all'utilizzo delle chiamate \gls{http}, al fine di estrapolare i dati di \emph{output} di un flusso ed elaborarli in uno \emph{script} esterno realizzato con l'ambiente Node.js, il quale sfrutta il linguaggio JavaScript. Maggiori informazioni su quanto sviluppato per questa soluzione sono presenti nel capitolo 3.3 Programmazione.\\
 Per quanto concerne i \emph{test} su applicazioni Power Apps, sono presenti diversi strumenti nativi per verificare la loro corretta esecuzione. "Test studio" è uno strumento che permette di eseguire l'applicazione e registrare tutte le azioni intraprese dall'utente (o definite manualmente) al fine di generare uno \emph{script} di \emph{test} che possa ripetere tali azioni e fornire un riscontro.\\
 Attualmente l'utilizzo di Test studio non è conveniente a causa del numero considerevole delle sue limitazioni:
-il suo funzionamento è limitato solo a componenti "classici", ovvero una lista di componenti presenti su Power Apps prima dell'arrivo dei componenti "moderni". Esclude inoltre l'uso di componenti \emph{custom} e non è compatibile con l'integrazione nativa tra Power Apps e Git.\\\\    
+il suo funzionamento è limitato solo a componenti "classici", ovvero una lista di componenti presenti su Power Apps prima dell'arrivo dei componenti "moderni". Esclude inoltre l'uso di componenti \emph{custom} e non è compatibile con l'integrazione nativa tra Power Apps e Git.\\
 Per questi motivi la metodologia identificata per permettere il \emph{testing} ad applicazioni Power Apps è la funzionalità "Visualizza l'anteprima dell'app", con la quale è possibile eseguirla e verificarne il corretto funzionamento.\\
 Nel caso in cui si verificassero degli errori durante tale operazione, i loro dettagli possono essere visualizzati. 
 
@@ -351,7 +351,7 @@ Nel caso in cui il problema riscontrato fosse molto problematico, il sistema di 
 Il monitoraggio dei \emph{report} Jenkins, delle esecuzioni dei flussi Power Automate e delle esecuzioni delle applicazioni Power Apps sono nativamente forniti dai rispettivi servizi. Tramite le interfacce disponibili è possibile vedere le informazioni sufficienti ad identificare eventuali problemi e "colli di bottiglia". 
 
 \subsubsection*{Applicazioni aziendali} 
-Le fasi di progettazione relative alle applicazioni aziendali su cui ho lavorato sono state limitate alla scelta delle strategie da esplorare per risolvere i problemi emersi. Questo perché tali applicazioni erano già presenti da tempo al momento del mio arrivo in azienda.\\
+Le fasi di progettazione relative alle applicazioni aziendali su cui ho lavorato sono state limitate alla scelta delle strategie da esplorare per risolvere i problemi emersi. Questo perché tali applicazioni erano già presenti da tempo al momento del mio arrivo in azienda.
 Eccezione è fatta per l'applicazione Non conformità che, a differenza delle altre, era nelle sue prime fasi di sviluppo.\\
 Al fine di comprenderne gli obiettivi ho preso parte a dei \emph{meeting} dedicati con il \emph{tutor} aziendale e la parte del \emph{team} di sviluppo coinvolta.\\ 
 Ho in seguito contribuito a progettare l'aspetto grafico e le soluzioni atte a soddisfarne i requisiti ma il mio periodo di \emph{stage} è terminato prima che io potessi iniziare il loro sviluppo.  
@@ -371,8 +371,7 @@ Infine viene eseguito uno \emph{script} Excel il quale scrive in una tabella di 
     \caption{Flusso per testare condizioni, approvazioni ed esecuzione di \emph{script}.}
     \label{fig:flussoApprovazioni}
 \end{figure}
-
-\noindent A fini illustrativi l'immagine mostra una versione semplificata del flusso descritto. Essa esclude il controllo della presenza di un \emph{file} omonimo e quindi non include il ciclo Do until e l'inizializzazione e modifica di variabili.\\
+\newline \noindent A fini illustrativi l'immagine mostra una versione semplificata del flusso descritto. Essa esclude il controllo della presenza di un \emph{file} omonimo e quindi non include il ciclo Do until e l'inizializzazione e modifica di variabili.\\
 Successivamente ho prodotto una presentazione PowerPoint al fine di esporre, al \emph{tutor} aziendale, le funzionalità, i lati positivi e i lati negativi delle tecnologie Power Automate e Power Apps, in funzione di quanto appreso durante la prima settimana di \emph{stage}.
 
 \subsection{Sviluppo DevOps}
@@ -397,81 +396,100 @@ I documenti “Norme di progetto” e “Analisi statica” sono stati redatti e
 Inoltre ho prodotto una presentazione PowerPoint contenente le principali informazioni presenti nei documenti citati e l'ho esposta al \emph{team} di sviluppo. 
 
 \subsubsection*{Build}
-Ho prodotto il documento “Guida Jenkins”, il quale comprende tutte le nozioni e le norme relative all'adozione di Jenkins, al fine di applicare la fase Build a progetti Power Automate e Power Apps e l'ho condiviso con il \emph{team} di sviluppo e con il \emph{tutor} aziendale.\\  
-Per automatizzare l'esportazione delle Microsoft Solutions e il loro caricamento nel \emph{repository}, ho adottato un Multibranch Pipeline Job Jenkins. Il relativo Jenkinsfile prodotto esegue, tramite i propri Stage, le seguenti operazioni:
+Al fine di collegare il Job Jenkins con il \emph{repository}, senza dover utilizzare \emph{token} di accesso GitHub personali, ho utilizzato la funzione che permette di generare “GitHub Apps”. Esse sono applicazioni integrate in GitHub che permettono il collegamento tra i \emph{repository} desiderati con altri specifici strumenti e servizi, definendone con precisione il livello di accesso e autorizzazioni.  
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.5\columnwidth]{githubAppPermessi} 
+    \caption{Configurazione dei permessi e selezione dei repository connessi ad una GitHub App.}
+    \label{fig:githubAppPermessi}
+\end{figure}
+\newline Per automatizzare l'esportazione delle Microsoft Solutions e il loro caricamento nel \emph{repository}, ho adottato un Multibranch Pipeline Job Jenkins. Il relativo Jenkinsfile prodotto esegue, tramite i propri Stage, le seguenti operazioni:
 \begin{itemize}
     \item Seleziona il corretto \emph{branch} del \emph{repository} ed esegue un comando \emph{pull}
     \item Cerca modifiche nella cartella relativa all'applicazione Power Apps
     \item Esegue l'autenticazione Micorsoft tramite gli appositi comandi forniti dalla Power Platform CLI
     \item Esporta la Microsoft Solutions
     \item Controlla l'eventuale presenza di una omonima Solution già presente nel \emph{repository} e, se presente, la elimina 
-    \item Carica il pacchetto relativo alla nuova versione della Solution nel \emph{repository}\\
+    \item Carica il pacchetto relativo alla nuova versione della Solution nel \emph{repository}
 \end{itemize}
-Al fine di collegare il Job Jenkins con il \emph{repository}, senza dover utilizzare \emph{token} di accesso GitHub personali, ho utilizzato la funzione che permette di generare “GitHub Apps”. Esse sono applicazioni integrate in GitHub che permettono il collegamento tra i \emph{repository} desiderati con altri specifici strumenti e servizi, definendone con precisione il livello di accesso e autorizzazioni.  
-\begin{figure}[htbp] 
-    \centering 
-    \includegraphics[width=0.3\columnwidth]{githubAppPermessi} 
-    \caption{Configurazione dei permessi e selezione dei repository connessi ad una GitHub App.}
-    \label{fig:githubAppPermessi}
-\end{figure}
+Ho prodotto il documento “Guida Jenkins”, il quale comprende tutte le nozioni e le norme relative all'adozione di Jenkins, al fine di applicare la fase Build a progetti Power Automate e Power Apps e l'ho condiviso con il \emph{team} di sviluppo e con il \emph{tutor} aziendale.\\  
+
 
 \subsubsection*{Test}
-L’applicazione di test automatici per i flussi Power Automate è avvenuta, oltre all’utilizzo degli strumenti nativi già discussi, tramite lo sviluppo di soluzioni esterne sfruttando le chiamate HTTP.\\
-Esse permettono la comunicazione e lo scambio di dati tra flussi Power Automate e altri flussi o applicazioni: esiste infatti la possibilità di richiamare lo specifico Trigger “Alla ricezione di una richiesta HTTP” il quale genera un personale URL (Uniform Resource Locator), ovvero una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di computer.\\
-In seguito è possibile utilizzare la corrispondente azione “Response” al fine di rispondere al chiamante con l’output della richiesta. 
+L'applicazione di \emph{test} automatici per i flussi Power Automate è avvenuta, oltre all'utilizzo degli strumenti nativi già discussi, tramite lo sviluppo di soluzioni esterne sfruttando le chiamate \gls{http}.\\
+Esse permettono la comunicazione e lo scambio di dati tra flussi Power Automate e altri flussi o applicazioni: esiste infatti la possibilità di richiamare lo specifico Trigger “Alla ricezione di una richiesta HTTP” il quale genera un personale URL (Uniform Resource Locator), ovvero una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di \emph{computer}.\\
+In seguito è possibile utilizzare la corrispondente azione “Response” al fine di rispondere al chiamante con l'\emph{output} della richiesta. 
 \begin{figure}[htbp] 
     \centering 
     \includegraphics[width=0.3\columnwidth]{flussoHttp} 
     \caption{Flusso di esempio per ricevere e risondere a chiamate \gls{http}.}
     \label{fig:flussoHttp}
 \end{figure}
-L’invio delle chiamate e l’analisi dei dati di output inviati dal flusso oggetto di test, sono avvenute mediante uno script Node.js con l’ausilio della libreria “Axios”, la quale offre funzionalità per l’invio e la ricezione asincrona delle chiamate http.\\
-Per poter inviare una chiamata al flusso desiderato tramite script, è necessario ottenere, tramite un’ulteriore chiamata http, un token Microsoft di autenticazione. 
+\newline L'invio delle chiamate e l'analisi dei dati di \emph{output} inviati dal flusso oggetto di \emph{test}, sono avvenute mediante uno \emph{script} Node.js con l'ausilio della libreria “Axios”, la quale offre funzionalità per l'invio e la ricezione asincrona delle chiamate \gls{http}.\\
+Per poter inviare una chiamata al flusso desiderato tramite \emph{script}, è necessario ottenere, tramite un'ulteriore chiamata \gls{http}, un \emph{token} Microsoft di autenticazione. 
 \begin{figure}[htbp] 
     \centering 
-    \includegraphics[width=0.3\columnwidth]{richiestaTokenNode} 
-    \caption{Parte dello script responsabile per l'ottenimento del token di autenticazione Microsoft.}
+    \includegraphics[width=0.7\columnwidth]{richiestaTokenNode} 
+    \caption{Parte dello \emph{script} responsabile per l'ottenimento del \emph{token} di autenticazione Microsoft.}
     \label{fig:richiestaTokenNode}
 \end{figure}
 In seguito è possibile, aggiungendo quanto ritornato dalla precedente chiamata, inviare la richiesta di esecuzione al flusso da testare.\\
-Grazie all’Azione del flusso “Response”, lo script può proseguire alla ricezione della risposta contenente l’output di Power Automate in modo da analizzarla e determinarne l’esito.\\
+Grazie all'Azione del flusso “Response”, lo \emph{script} può proseguire alla ricezione della risposta contenente l'\emph{output} di Power Automate in modo da analizzarla e determinarne l'esito.\\\\
 \begin{figure}[htbp] 
     \centering 
-    \includegraphics[width=0.3\columnwidth]{analisiEsitoTest} 
-    \caption{Parte dello script responsabile per l'analisi dell'esito dei test su flussi Power Automate.}
+    \includegraphics[width=0.5\columnwidth]{analisiEsitoTest} 
+    \caption{Parte dello \emph{script} responsabile per l'analisi dell'esito dei \emph{test} su flussi Power Automate.}
     \label{fig:analisiEsitoTest}
 \end{figure}
-Nell’immagine è mostrata una porzione dello script nel quale viene, a fini dimostrativi, controllato se il risultato della chiamata è stata un successo, definito con codice 200, e se l’output del flusso è uguale ad un intero di valore 1. In funzione dell’esito del controllo e dello stato di successo della chiamata, viene mostrato a schermo un relativo messaggio.\\
-Ai fini di rendere automatico questo processo, l’esecuzione dello script illustrato è stato incluso nel Jenkinsfile relativo al Job Jenkins dell’applicazione aziendale Report di visita.\\
-Tale pratica porta beneficio ai fini di garantire la qualità e la funzionalità attesa dai flussi testati però è da considerare che la natura dei prodotti realizzati con Power Automate richiede che essi vengano modificati al fine di essere predisposti alla ricezione e alla risposta delle chiamate http di test. Inoltre è da tenere in considerazione che tali funzioni necessitano della licenza premium.\\\\
-Per le applicazioni Power Apps ho esplorato la possibilità di estrarre tramite la funzione “Scarica suite” un file contenente le azioni registrate dallo strumento Test Studio ma, in funzione delle conclusioni esplicitate precedentemente riguardo tale strumento, tale strategia non è stata integrata nel sistema di testing.\\\\
-Ho prodotto il documento “Test dinamici” contenente tutte le informazioni relative ai metodi individuati per effettuare tali test su Power Automate e su Power Apps, sia con strumenti nativi che esterni. Ho aggiornato il documento “Guida Jenkins” al fine di contenerne anche le nozioni riguardanti quanto descritto.\\
-Tali documenti sono stati condivisi con il team di sviluppo e con il tutor aziendale.\\
-Inoltre ho prodotto, ed esposto al team di sviluppo, una presentazione PowerPoint contenente le principali informazioni apprese e le soluzioni individuate e sviluppate relativamente alle fasi Build e Test. 
+\newline Nell'immagine è mostrata una porzione dello \emph{script} nel quale viene, a fini dimostrativi, controllato se il risultato della chiamata è stata un successo, definito con codice 200, e se l'\emph{output} del flusso è uguale ad un intero di valore 1. In funzione dell'esito del controllo e dello stato di successo della chiamata, viene mostrato a schermo un relativo messaggio.\\
+Ai fini di rendere automatico questo processo, l'esecuzione dello \emph{script} illustrato è stato incluso nel Jenkinsfile relativo al Job Jenkins dell'applicazione aziendale Report di visita.\\
+Tale pratica garantisce la qualità e la funzionalità attesa dai flussi testati però è da considerare che la natura dei prodotti realizzati con Power Automate richiede che essi vengano modificati al fine di essere predisposti alla ricezione e alla risposta delle chiamate \gls{http} di \emph{test}. Inoltre è da tenere in considerazione che tali funzioni necessitano della licenza \emph{premium}.\\\\
+Per le applicazioni Power Apps ho esplorato la possibilità di estrarre tramite la funzione “Scarica suite” un file contenente le azioni registrate dallo strumento Test Studio ma, in funzione delle conclusioni esplicitate precedentemente riguardo tale strumento, tale strategia non è stata integrata nel sistema di \emph{testing}.\\\\
+Ho prodotto il documento “Test dinamici” contenente tutte le informazioni relative ai metodi individuati per effettuare tali \emph{test} su Power Automate e su Power Apps, sia con strumenti nativi che esterni. Ho aggiornato il documento “Guida Jenkins” al fine di contenerne anche le nozioni riguardanti quanto descritto.\\
+Tali documenti sono stati condivisi con il \emph{team} di sviluppo e con il \emph{tutor} aziendale.\\
+Inoltre ho prodotto, ed esposto al \emph{team} di sviluppo, una presentazione PowerPoint contenente le principali informazioni apprese e le soluzioni individuate e sviluppate relativamente alle fasi Build e Test. 
 
 \subsubsection*{Deploy}
-Al fine di comprendere e testare l’applicazione della fase Deploy ho esplorato, insieme a parte del team di sviluppo, le funzionalità legate all’importazione delle Microsoft Solutions, gestite e non gestite, all’interno di diversi ambienti di produzione.\\ 
-Al fine di agevolare il collegamento agli account e ai servizi Microsoft corrispondenti al nuovo ambiente, sono state utilizzate, ed inserite all’interno della relativa Solution, i “riferimenti alle connessioni”. Essi sono entità che rappresentano il collegamento tra un'applicazione, un servizio o un flusso e una risorsa esterna e offrono la possibilità di essere cambiati in maniera dinamica durante la fase di importazione in un ambiente.\\\\\\
-
-L’applicazione delle fasi di DevOps Release, Operate e Monitor non hanno avuto necessità, a seguito delle attività di analisi e progettazione, di attività di sviluppo aggiuntive. 
-
+Al fine di comprendere e testare l'applicazione della fase Deploy ho esplorato, insieme a parte del \emph{team} di sviluppo, le funzionalità legate all'importazione delle Microsoft Solutions, gestite e non gestite, all'interno di diversi ambienti di produzione.\\ 
+Al fine di agevolare il collegamento agli \emph{account} e ai servizi Microsoft corrispondenti al nuovo ambiente, sono state utilizzate, ed inserite all'interno della relativa Solution, i “riferimenti alle connessioni”. Essi sono entità che rappresentano il collegamento tra un'applicazione, un servizio o un flusso e una risorsa esterna, e offrono la possibilità di essere cambiati in maniera dinamica durante la fase di importazione in un ambiente.\\\\\\
+L'applicazione delle fasi di \gls{DevOps} Release, Operate e Monitor, a seguito delle attività di analisi e progettazione, non hanno avuto necessità di attività di sviluppo aggiuntive. 
 
 \subsection{Applicazioni aziendali}
 \subsubsection*{Report di visita}
-
-
-\subsubsection*{Registro accessi}
-
-\subsubsection*{Non conformità}
-
+Le attività di sviluppo dell'applicazione aziendale Report di visita hanno affiancato le attività di ricerca del mio \emph{stage} per la maggior parte della sua durata.\\
+Esse, oltre all'integrazione delle pratiche \gls{DevOps} descritte precedentemente, si sono focalizzate sulle strategie di \emph{retrieve} dei dati tramite appositi flussi Power Automate collegati all'applicazione.\\
+Gli strumento di archiviazione utilizzato principalmente è stato SharePoint ma è stata testata anche la possibilità \emph{premium} di leggere dati da SQL Server.\\
+Le principali difficoltà affrontate sono relative ai limiti sul numero di \emph{record} ottenibili per ogni richiesta a SharePoint:
+\begin{itemize}
+    \item Essendo per Power Apps una funzione non delegabile, ovvero che non può delegare l'elaborazione dei dati al \emph{server}, è presente il limite di 500 \emph{record} ottenibili di \emph{default} estendibile fino a 2000 modificando le impostazioni. Inoltre eventuali filtri sulla ricerca vengono applicati solo dopo aver ricevuto quel numero di dati, pertanto, il risultato ottenuto è un insieme limitato del risultato atteso.
+    \item Eseguendo l'analoga funzione da un flusso Power Automate, si incorre in un ulteriore limite imposto da Sharepoint uguale a 5000 risultati ottenibili per chiamata.\\
+    In merito sono state esplorate soluzioni legate al precaricamento di tutti i dati, mediante chiamate multiple, al fine di applicare successivamente il filtraggio dei dati richiesti, e all'utilizzo di chiamate \gls{http} a servizi SharePoint. Queste soluzioni sono state successivamente scartate a causa degli eccessivi tempi di esecuzione e ad altre limitazioni incontrate come l'impossibilità per SarePoint di eseguire il comando di ricerca per sottostringa.
+    \item Dopo aver ottenuto i dati desiderati sfruttando particolari funzionalità di indicizzazione delle liste SharePoint, sono state incontrate difficoltà legate all'aggiornamento grafico di alcuni componenti fondamentali dell'applicazione utilizzati per mostrare dinamicamente i contenuti ricavati.\\
+    Tale problema è stato risolto tramite lo sviluppo di un nuovo componente \emph{custom}.  
+\end{itemize}
+Al fine di fare \emph{test} su liste SharePoint, popolate dinamicamente da un numero elevato di elementi, ho generato tabelle Excel in maniera automatica scrivendo appositamente degli “Office Scripts”.\\\\
+Le mie attività di sviluppo legate alle applicazioni Registro accessi e Non conformità sono legate ad aspetti grafici e all'individuazione di possibili risoluzioni di problemi legati alle singole funzioni Fx. 
 
 \subsection{Sviluppo Angular}
-
-
-
-
-
-
+Al fine di comprendere il funzionamento e lo sviluppo di progetti Angular, ho realizzato una basilare applicazione \emph{web} che mostrava nell'interfaccia grafica immagini e testo.\\
+Essa è stata il punto di partenza per lo sviluppo di una \emph{suite} di \emph{test} eseguiti con l'apposito strumento “Karma”. Tale esecuzione è poi stata automatizzata in un Job Jenkins di tipo \emph{pipeline}, il quale: 
+\begin{itemize}
+    \item Seleziona e utilizza la versione di Node.js predeterminata
+    \item Preleva il progetto dal \emph{repository} Git
+    \item Esegue i \emph{test} di unità definiti
+    \item Compila i \emph{file} e genera il relativo pacchetto composto da elementi HTML e JavaScript
+    \item Mostra a schermo il risultato dei \emph{test} in un apposito grafico
+    \item Salva gli artefatti creati in Jenkins, vincolando la presenza dei salvataggi ai soli tre più recenti
+    \item Pulisce il \emph{workspace} relativo al Job e alle compilazioni avvenute  
+\end{itemize}
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.7\columnwidth]{graficoTest} 
+    \caption{Grafico dell'esito dei \emph{test} generato da Jenkins.}
+    \label{fig:graficoTest}
+\end{figure}
+Inoltre ho applicato quanto appreso per produrre un ulteriore \emph{pipeline} Job al fine di replicare le fasi di \gls{DevOps} anche su progetti aziendali realizzati con Angular.\\
+Infine ho generato il documento “Angular in Jenkins” contenente quanto affrontato in merito e l'ho esposto al \emph{team} di sviluppo e al \emph{tutor} aziendale. 
 \section{Verifica e Validazione}
 In questa sezione sono presenti tutte le attività da me svolte al fine di verificare il corretto funzionamento delle soluzioni sviluppate e il loro soddisfacimento dei requisiti progettuali.
 
