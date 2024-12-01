@@ -110,9 +110,7 @@ La seconda rappresenta la struttura di controllo rappresentata nei classici ling
 \end{figure}
 \noindent Successivamente è emersa, da parte del tutor aziendale, la necessità di integrare i flussi Power Automate con il \emph{software} gestionale WOW e gli altri prodotti aziendali al fine di poter integrare le funzionalità desiderate con libertà mantenendo coordinate le diverse parti del prodotto.\\
 Sono emersi quindi due requisiti: il primo, utile per apprendere le tecnologie in oggetto, è relativo alla creazione di un flusso che automatizzi un processo approvativo.\\
-Il secondo, più concreto e integrabile con i prodotti aziendali, è basato sull'applicazione, ai flussi Power Automate, di chiamate \gls{http}(Hypertext Transfer Protocol): in italiano "protocollo di trasferimento ipertestuale" è un protocollo di rete, ovvero un insieme di regole formalmente descritte che definiscono le modalità di comunicazione tra due o più apparecchiature elettroniche, usato come principale sistema per la trasmissione d'informazioni sul \emph{web}.\\
-Esse permettono la comunicazione e lo scambio di dati tra flussi Power Automate e altri flussi o applicazioni: esiste infatti la possibilità di richiamare lo specifico Trigger "Alla ricezione di una richiesta HTTP" il quale genera un personale URL (Uniform Resource Locator), ovvero una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di \emph{computer}.\\
-In seguito è possibile utilizzare la corrispondente azione "Response" al fine di rispondere al chiamante con l'\emph{output} della richiesta.
+Il secondo, più concreto e integrabile con i prodotti aziendali, è basato sull'applicazione, ai flussi Power Automate, di chiamate \gls{http}(Hypertext Transfer Protocol): in italiano "protocollo di trasferimento ipertestuale" è un protocollo di rete, ovvero un insieme di regole formalmente descritte che definiscono le modalità di comunicazione tra due o più apparecchiature elettroniche, usato come principale sistema per la trasmissione d'informazioni sul \emph{web}.
 \subsubsection*{Power Apps}
 I flussi Power Automate portano grande vantaggio in termini di efficienza dei processi aziendali e possono aumentare il numero di funzionalità di un'applicazione.\\
 Per questo motivo il loro utilizzo assume maggiore significato quando associato alla realizzazione di applicazioni Power Apps, le quali sono pensate per integrare nativamente i flussi creati.\\
@@ -410,26 +408,66 @@ Per automatizzare l'esportazione delle Microsoft Solutions e il loro caricamento
     \item Carica il pacchetto relativo alla nuova versione della Solution nel \emph{repository}\\
 \end{itemize}
 Al fine di collegare il Job Jenkins con il \emph{repository}, senza dover utilizzare \emph{token} di accesso GitHub personali, ho utilizzato la funzione che permette di generare “GitHub Apps”. Esse sono applicazioni integrate in GitHub che permettono il collegamento tra i \emph{repository} desiderati con altri specifici strumenti e servizi, definendone con precisione il livello di accesso e autorizzazioni.  
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.3\columnwidth]{githubAppPermessi} 
+    \caption{Configurazione dei permessi e selezione dei repository connessi ad una GitHub App.}
+    \label{fig:githubAppPermessi}
+\end{figure}
 
 \subsubsection*{Test}
-
-
-\subsubsection*{Release}
-
+L’applicazione di test automatici per i flussi Power Automate è avvenuta, oltre all’utilizzo degli strumenti nativi già discussi, tramite lo sviluppo di soluzioni esterne sfruttando le chiamate HTTP.\\
+Esse permettono la comunicazione e lo scambio di dati tra flussi Power Automate e altri flussi o applicazioni: esiste infatti la possibilità di richiamare lo specifico Trigger “Alla ricezione di una richiesta HTTP” il quale genera un personale URL (Uniform Resource Locator), ovvero una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di computer.\\
+In seguito è possibile utilizzare la corrispondente azione “Response” al fine di rispondere al chiamante con l’output della richiesta. 
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.3\columnwidth]{flussoHttp} 
+    \caption{Flusso di esempio per ricevere e risondere a chiamate \gls{http}.}
+    \label{fig:flussoHttp}
+\end{figure}
+L’invio delle chiamate e l’analisi dei dati di output inviati dal flusso oggetto di test, sono avvenute mediante uno script Node.js con l’ausilio della libreria “Axios”, la quale offre funzionalità per l’invio e la ricezione asincrona delle chiamate http.\\
+Per poter inviare una chiamata al flusso desiderato tramite script, è necessario ottenere, tramite un’ulteriore chiamata http, un token Microsoft di autenticazione. 
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.3\columnwidth]{richiestaTokenNode} 
+    \caption{Parte dello script responsabile per l'ottenimento del token di autenticazione Microsoft.}
+    \label{fig:richiestaTokenNode}
+\end{figure}
+In seguito è possibile, aggiungendo quanto ritornato dalla precedente chiamata, inviare la richiesta di esecuzione al flusso da testare.\\
+Grazie all’Azione del flusso “Response”, lo script può proseguire alla ricezione della risposta contenente l’output di Power Automate in modo da analizzarla e determinarne l’esito.\\
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=0.3\columnwidth]{analisiEsitoTest} 
+    \caption{Parte dello script responsabile per l'analisi dell'esito dei test su flussi Power Automate.}
+    \label{fig:analisiEsitoTest}
+\end{figure}
+Nell’immagine è mostrata una porzione dello script nel quale viene, a fini dimostrativi, controllato se il risultato della chiamata è stata un successo, definito con codice 200, e se l’output del flusso è uguale ad un intero di valore 1. In funzione dell’esito del controllo e dello stato di successo della chiamata, viene mostrato a schermo un relativo messaggio.\\
+Ai fini di rendere automatico questo processo, l’esecuzione dello script illustrato è stato incluso nel Jenkinsfile relativo al Job Jenkins dell’applicazione aziendale Report di visita.\\
+Tale pratica porta beneficio ai fini di garantire la qualità e la funzionalità attesa dai flussi testati però è da considerare che la natura dei prodotti realizzati con Power Automate richiede che essi vengano modificati al fine di essere predisposti alla ricezione e alla risposta delle chiamate http di test. Inoltre è da tenere in considerazione che tali funzioni necessitano della licenza premium.\\\\
+Per le applicazioni Power Apps ho esplorato la possibilità di estrarre tramite la funzione “Scarica suite” un file contenente le azioni registrate dallo strumento Test Studio ma, in funzione delle conclusioni esplicitate precedentemente riguardo tale strumento, tale strategia non è stata integrata nel sistema di testing.\\\\
+Ho prodotto il documento “Test dinamici” contenente tutte le informazioni relative ai metodi individuati per effettuare tali test su Power Automate e su Power Apps, sia con strumenti nativi che esterni. Ho aggiornato il documento “Guida Jenkins” al fine di contenerne anche le nozioni riguardanti quanto descritto.\\
+Tali documenti sono stati condivisi con il team di sviluppo e con il tutor aziendale.\\
+Inoltre ho prodotto, ed esposto al team di sviluppo, una presentazione PowerPoint contenente le principali informazioni apprese e le soluzioni individuate e sviluppate relativamente alle fasi Build e Test. 
 
 \subsubsection*{Deploy}
+Al fine di comprendere e testare l’applicazione della fase Deploy ho esplorato, insieme a parte del team di sviluppo, le funzionalità legate all’importazione delle Microsoft Solutions, gestite e non gestite, all’interno di diversi ambienti di produzione.\\ 
+Al fine di agevolare il collegamento agli account e ai servizi Microsoft corrispondenti al nuovo ambiente, sono state utilizzate, ed inserite all’interno della relativa Solution, i “riferimenti alle connessioni”. Essi sono entità che rappresentano il collegamento tra un'applicazione, un servizio o un flusso e una risorsa esterna e offrono la possibilità di essere cambiati in maniera dinamica durante la fase di importazione in un ambiente.\\\\\\
+
+L’applicazione delle fasi di DevOps Release, Operate e Monitor non hanno avuto necessità, a seguito delle attività di analisi e progettazione, di attività di sviluppo aggiuntive. 
 
 
-\subsubsection*{Operate}
+\subsection{Applicazioni aziendali}
+\subsubsection*{Report di visita}
 
 
-\subsubsection*{Monitor}
+\subsubsection*{Registro accessi}
+
+\subsubsection*{Non conformità}
 
 
 \subsection{Sviluppo Angular}
 
 
-\subsection{Applicazioni aziendali}
 
 
 
