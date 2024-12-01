@@ -108,7 +108,7 @@ La seconda rappresenta la struttura di controllo rappresentata nei classici ling
     \caption{Esempio di un flusso Power Automate istantaneo.}
     \label{fig:esempioFlusso}
 \end{figure}
-\newline \noindent Successivamente è emersa, da parte del tutor aziendale, la necessità di integrare i flussi Power Automate con il \emph{software} gestionale WOW e gli altri prodotti aziendali al fine di poter integrare le funzionalità desiderate con libertà mantenendo coordinate le diverse parti del prodotto.\\
+\newline \noindent Successivamente è emersa, da parte del tutor aziendale, la necessità di integrare i flussi Power Automate con il \emph{software} gestionale \hyperref[WOW]{WOW} e gli altri prodotti aziendali al fine di poter integrare le funzionalità desiderate con libertà mantenendo coordinate le diverse parti del prodotto.\\
 Sono emersi quindi due requisiti: il primo, utile per apprendere le tecnologie in oggetto, è relativo alla creazione di un flusso che automatizzi un processo approvativo.\\
 Il secondo, più concreto e integrabile con i prodotti aziendali, è basato sull'applicazione, ai flussi Power Automate, di chiamate \gls{http}(Hypertext Transfer Protocol): in italiano "protocollo di trasferimento ipertestuale" è un protocollo di rete, ovvero un insieme di regole formalmente descritte che definiscono le modalità di comunicazione tra due o più apparecchiature elettroniche, usato come principale sistema per la trasmissione d'informazioni sul \emph{web}.
 \subsubsection*{Power Apps}
@@ -157,7 +157,7 @@ Esistono due tipi di Soluzioni:
 \end{itemize}
 A differenza delle tecnologie precedentemente descritte, le Micorsoft Solution non erano materia già affrontata in azienda, per cui il loro apprendimento è avvenuto in maniera totalmente autonoma mediante la documentazione presente nei siti \emph{web} Microsoft dedicati.\\
 Le Soluzioni preservano i loro dati, e quelli degli elementi in esse contenuti, nel sistema di archiviazione Microsoft Dataverse che funge da \emph{database} centralizzato per applicazioni sviluppate con la Power Platform.\\
-Tale adozione permette di usufruire di funzionalità altrimenti assenti. Le conseguenze del loro utilizzo e le motivazioni che mi hanno portato ad utilizzare questa tecnologia sono materia di discussione presente nel capitolo 3.2 Progettazione.\\
+Tale adozione permette di usufruire di funzionalità altrimenti assenti. Le conseguenze del loro utilizzo e le motivazioni che mi hanno portato ad utilizzare questa tecnologia sono materia di discussione presente nella sezione \hyperref[progettazioneSolutions]{Adozione delle Microsoft Solutions}.\\
 
 \subsection{DevOps}
 Prima di poter progettare una soluzione applicativa al fine di applicare le fasi di \gls{DevOps} a progetti realizzati con Power Automate e Power Apps, ho analizzato e compreso quali fossero le implicazioni di ogni \emph{step}.\\
@@ -207,7 +207,7 @@ Vengono inoltre raccolti i \emph{feedback} degli utenti finali e dei clienti al 
 Oltre all'analisi avvenuta sulle tecnologie al fine di raggiungere gli obiettivi riguardanti la ricerca sull'effettiva applicabilità delle pratiche di \gls{DevOps} ai progetti realizzati con Power Automate e Power Apps, è stato fin da subito definito che avrei alternato tali attività con fasi di sviluppo su applicazioni aziendali.\\  
 Questo approccio mi ha permesso di approfondire la conoscenza delle tecnologie in oggetto e di diventare operativo in modo più efficace.\\
 Insieme al membro del \emph{team} di sviluppo responsabile per la realizzazione delle applicazioni Power Apps e dei flussi Power Automate aziendali, ho affrontato problemi di sviluppo di vario genere in funzione delle necessità del momento, potendo analizzare diversi prodotti aziendali.\\
-Le effettive attività di programmazione svolte su queste applicazioni sono presenti al capitolo 3.3 Programmazione.\\
+Le effettive attività di programmazione svolte su queste applicazioni sono presenti nella sezione \hyperref[sviluppoApplicazioni]{Sviluppo di applicazioni aziendali}.\\
 I principali prodotti su cui abbiamo collaborativamente lavorato sono:
 \subsubsection*{Report di visita}
 Principale applicazione su cui ho lavorato e con cui ho svolto attività di analisi al fine di comprendere le tecnologie utilizzate. Essa ha l'obiettivo di offrire la possibilità ad un dipendente dell'azienda, il quale dovesse trovarsi nella sede di un cliente, di registrare e condividere con i colleghi, in un ambiente condiviso, un \emph{report} della visita al fine di tracciare l'esperienza con il cliente.\\
@@ -263,6 +263,7 @@ Questo è un fattore importante da considerare nelle fasi di progettazione di un
 In questa sottosezione vengono esplicitate le motivazioni che mi hanno portato a identificare determinate soluzioni al fine di soddisfare i requisiti compresi in fase di analisi.
 
 \subsubsection*{Adozione delle Microsoft Solutions}
+\label{progettazioneSolutions}
 L'adozione delle Soluzioni, essendo esse basate sul sistema di archiviazione Dataverse, comporta la possibilità aggiuntiva di poter visionare la "Version history" dei flussi Power Automate. Tale funzionalità è in grado di ripristinare specifiche versioni precedenti dei flussi, agevolando le fasi di sviluppo.
 \begin{figure}[htbp] 
     \centering 
@@ -319,7 +320,7 @@ Inoltre, in caso di errore, sono fornite le relative informazioni.
 \end{figure}
 
 \noindent Per eseguire \emph{test} esclusivamente su una specifica parte di un flusso Power Automate, simulando il comportamento delle azioni ad essa connesse, è disponibile la funzione "Static Result". Essa permette un maggiore controllo sull'esecuzione del flusso durante i \emph{test} e l'azzeramento dei tempi di esecuzione di azioni che non rappresentano il suo \emph{focus}.\\
-È inoltre stata individuata la possibilità di utilizzare i Trigger e le Azioni Power Automate legate all'utilizzo delle chiamate \gls{http}, al fine di estrapolare i dati di \emph{output} di un flusso ed elaborarli in uno \emph{script} esterno realizzato con l'ambiente Node.js, il quale sfrutta il linguaggio JavaScript. Maggiori informazioni su quanto sviluppato per questa soluzione sono presenti nel capitolo 3.3 Programmazione.\\\\
+È inoltre stata individuata la possibilità di utilizzare i Trigger e le Azioni Power Automate legate all'utilizzo delle chiamate \gls{http}, al fine di estrapolare i dati di \emph{output} di un flusso ed elaborarli in uno \emph{script} esterno realizzato con l'ambiente Node.js, il quale sfrutta il linguaggio JavaScript. Maggiori informazioni su quanto sviluppato per questa soluzione sono presenti nella sezione \hyperref[testProgrammazione]{Test} del sottocapitolo \hyperref[Sviluppo DevOps]{Sviluppo DevOps}.\\\\
 Per quanto concerne i \emph{test} su applicazioni Power Apps, sono presenti diversi strumenti nativi per verificare la loro corretta esecuzione. "Test studio" è uno strumento che permette di eseguire l'applicazione e registrare tutte le azioni intraprese dall'utente (o definite manualmente) al fine di generare uno \emph{script} di \emph{test} che possa ripetere tali azioni e fornire un riscontro.\\
 Attualmente l'utilizzo di Test studio non è conveniente a causa del numero considerevole delle sue limitazioni:
 il suo funzionamento è limitato solo a componenti "classici", ovvero una lista di componenti presenti su Power Apps prima dell'arrivo dei componenti "moderni". Esclude inoltre l'uso di componenti \emph{custom} e non è compatibile con l'integrazione nativa tra Power Apps e Git.\\\\
@@ -382,9 +383,10 @@ Infine viene eseguito uno \emph{script} Excel il quale scrive in una tabella di 
 Successivamente ho prodotto una presentazione PowerPoint al fine di esporre, al \emph{tutor} aziendale, le funzionalità, i lati positivi e i lati negativi delle tecnologie Power Automate e Power Apps, in funzione di quanto appreso durante la prima settimana di \emph{stage}.
 
 \subsection{Sviluppo DevOps}
-\subsubsection*{Plan}
+\label{Sviluppo DevOps}
+\subsubsection*{Plan} 
 Le attività pratiche legate alla fase di pianificazione sono la configurazione degli ambienti Planner e Taiga e la loro condivisione e utilizzo con i membri del \emph{team} coinvolti.\\
-Inoltre, in collaborazione con lo stagista responsabile del progetto LINKDELPROGETTODIGIACOMO, abbiamo esplorato la possibilità di integrare i flussi Power Automate al fine di sostituire le logiche, realizzate tramite complessi \emph{scirpt}, responsabili per l'interazione e la sincronizzazione tra le due piattaforme di pianificazione.\\
+Inoltre, in collaborazione con lo stagista responsabile del progetto \hyperref[stageGiacomo]{Integrazione sistemi di pianificazione di progetto}, abbiamo esplorato la possibilità di integrare i flussi Power Automate al fine di sostituire le logiche, realizzate tramite complessi \emph{scirpt}, responsabili per l'interazione e la sincronizzazione tra le due piattaforme di pianificazione.\\
 Per farlo abbiamo inoltre esplorato l'utilizzo dei \emph{webhooks}, ovvero degli strumenti \emph{web} che permettono di configurare l'invio automatico di chiamate \gls{http} di ritorno da parte di un'applicazione \emph{web} al fine di ricevere dati automaticamente al verificarsi di uno specifico evento.\\
 A causa delle limitazioni incontrate nell'utilizzo di servizi di \emph{webhooks} e della fine dello svolgimento dello \emph{stage} della persona con cui collaboravo, tali studi non hanno portato a soluzioni effettivamente utilizzate.
 
@@ -392,7 +394,7 @@ A causa delle limitazioni incontrate nell'utilizzo di servizi di \emph{webhooks}
 Le attività da me svolte al fine di predisporre la fase Code per la sua applicazione a progetti Power Automate e Power Apps comprendono principalmente la realizzazione e la documentazione del sistema di versionamento individuato in fase di progettazione e la documentazione e l'applicazione degli strumenti per l'analisi statica del codice identificati.\\
 Per il versionamento ho adattato, prima in un \emph{branch} di prova e poi nei restanti, il \emph{repository} Git dell'applicazione aziendale Report di visita in modo da rispecchiare le norme definite.\\
 Esse riguardano le regole da seguire per versionare il progetto e la struttura dei percorsi dei \emph{file}, divisi in base alla loro funzione.\\  
-Tali norme sono state definite con la collaborazione di parte del \emph{team} di sviluppo e dello stagista universitario responsabile del progetto LINKPROGETTOBROTTO.\\ 
+Tali norme sono state definite con la collaborazione di parte del \emph{team} di sviluppo e dello stagista universitario responsabile del progetto \hyperref[stageDavide]{Applicativi di DevOps in ambito Sistemi}.\\ 
 Per fare in modo di contenere nel \emph{repository} i \emph{file} relativi ai flussi Power Automate e le applicazioni Power Apps, è stata predisposta una cartella apposita al fine di contenere il pacchetto ZIP relativo alla Microsoft Solution del progetto.\\ 
 Tale pacchetto nel \emph{repository} assume valore in ottica di \emph{backup} e ripristino, nel caso in cui si necessitasse l'esecuzione di una specifica versione del progetto.\\  
 Per fare in modo che Power Apps riesca ad utilizzare la funzione integrata che gli permette di interfaccairsi con Git direttamente dalla sua interfaccia grafica, è necessario che nel \emph{repository} sia presente tale applicazione in un formato non compresso. È pertanto stato deciso di mantenere, per quanto ridondante, una copia dell'applicazione al fine di agevolare le fasi di sviluppo.\\ 
@@ -422,6 +424,7 @@ Al fine di collegare il Job Jenkins con il \emph{repository}, senza dover utiliz
 Ho prodotto il documento “Guida Jenkins”, il quale comprende tutte le nozioni e le norme relative all'adozione di Jenkins, al fine di applicare la fase Build a progetti Power Automate e Power Apps e l'ho condiviso con il \emph{team} di sviluppo e con il \emph{tutor} aziendale.
 
 \subsubsection*{Test}
+\label{testProgrammazione}
 L'applicazione di \emph{test} automatici per i flussi Power Automate è avvenuta, oltre all'utilizzo degli strumenti nativi già discussi, tramite lo sviluppo di soluzioni esterne sfruttando le chiamate \gls{http}.\\
 Esse permettono la comunicazione e lo scambio di dati tra flussi Power Automate e altri flussi o applicazioni: esiste infatti la possibilità di richiamare lo specifico Trigger “Alla ricezione di una richiesta HTTP” il quale genera un personale URL (Uniform Resource Locator), ovvero una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di \emph{computer}.\\
 In seguito è possibile utilizzare la corrispondente azione “Response” al fine di rispondere al chiamante con l'\emph{output} della richiesta.\\
@@ -460,7 +463,8 @@ Al fine di comprendere e testare l'applicazione della fase Deploy ho esplorato, 
 Al fine di agevolare il collegamento agli \emph{account} e ai servizi Microsoft corrispondenti al nuovo ambiente, sono state utilizzate, ed inserite all'interno della relativa Solution, i “riferimenti alle connessioni”. Essi sono entità che rappresentano il collegamento tra un'applicazione, un servizio o un flusso e una risorsa esterna, e offrono la possibilità di essere cambiati in maniera dinamica durante la fase di importazione in un ambiente.\\\\\\
 L'applicazione delle fasi di \gls{DevOps} Release, Operate e Monitor, a seguito delle attività di analisi e progettazione, non hanno avuto necessità di attività di sviluppo aggiuntive. 
 
-\subsection{Applicazioni aziendali}
+\subsection{Sviluppo di applicazioni aziendali}
+\label{sviluppoApplicazioni}
 \subsubsection*{Report di visita}
 Le attività di sviluppo dell'applicazione aziendale Report di visita hanno affiancato le attività di ricerca del mio \emph{stage} per la maggior parte della sua durata.\\
 Esse, oltre all'integrazione delle pratiche \gls{DevOps} descritte precedentemente, si sono focalizzate sulle strategie di \emph{retrieve} dei dati tramite appositi flussi Power Automate collegati all'applicazione.\\
