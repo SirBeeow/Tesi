@@ -1,4 +1,4 @@
-\chapter{Svolgimento stage}
+\chapter{Svolgimento \emph{stage}}
 \label{cap:svolgimentoStage}
 In questo capitolo vengono descritte tutte le attività da me svolte durante lo \emph{stage}, divise nelle sezioni "Analisi", "Progettazione" e "Sviluppo software e documentale", in modo da fornire una panoramica chiara e strutturata del lavoro svolto, evidenziando il processo seguito e le competenze acquisite in ciascuna attività.\\
 \section{Analisi}
@@ -56,7 +56,7 @@ Tali documenti comprendono i "Documenti di sviluppo sicuro" e includono:
 \end{itemize}
 Relativamente a quest'ultimo punto, nei primi giorni ho approfondito il lavoro svolto dagli altri stagisti tramite appositi \emph{meeting} nei quali mi hanno descritto i risultati ottenuti fino a quel momento. Essi, avendo iniziato lo svolgimento del progetto circa una settimana prima, mi hanno esposto, mediante apposite presentazioni PowerPoint, le proprie ricerche riguardanti l'utilizzo dello strumento Git e dello studio avvenuto riguardo la possibilità di integrare tra loro gli strumenti Planner e Taiga. 
 
-\subsection{Tecnologie oggetto di stage}
+\subsection{Tecnologie oggetto di \emph{stage}}
 Questa sottosezione descirve i metodi di apprendimento e le nozioni apprese durante la fase di analisi delle tecnologie su cui si basa la ricerca del mio progetto di \emph{stage}.\\
 Dopo aver compreso le tecnologie e i principali processi aziendali, ho partecipato ad un \emph{meeting} con il \emph{tutor} aziendale al fine di discutere il mio progetto di \emph{stage}.\\
 Gli obiettivi scaturiti da tale incontro sono stati: 
@@ -249,7 +249,7 @@ Esso è un \emph{framework} per la realizzazione di applicazioni \emph{web} tram
 Tramite il sito \emph{web} ufficiale di Angular, ho seguito le guide fornite in modo da apprenderne le basi e poter realizzare quanto richiesto soddisfacendo i requisiti assegnati.\\
 
 \section{Progettazione}
-In questa sezione sono presenti tutte le attività di progettazione da me svolte e il suo scopo è descrivere le modalità con cui ho individuato le soluzioni ai bisogni progettuali in modo da soddisfarne i requisiti.
+%In questa sezione sono presenti tutte le attività di progettazione da me svolte e il suo scopo è descrivere le modalità con cui ho individuato le soluzioni ai bisogni progettuali in modo da soddisfarne i requisiti.
 \subsection{\emph{Scope} di Power Automate e Power Apps}
 A seguito dell'analisi avvenuta sulle tecnologie oggetto di \emph{stage} è stato possibile identificare il compito che Power Automate e Power Apps devono avere all'interno di un progetto. 
 Esse sono infatti tecnologie pensate per sviluppare in maniera rapida soluzioni relativamente semplici. Nel momento in cui ci fosse la necessità di applicare logiche molto complesse o l'integrazione con servizi esterni dalla \emph{suite} Microsoft, tali strumenti non sono più ideali in quanto si incomberebbe in numerosi vincoli tecnologici.
@@ -505,37 +505,56 @@ Infine ho generato il documento “Angular in Jenkins” contenente quanto affro
 \subsection{Risultati qualitativi}
 Lo studio delle tecnologie Power Automate e Power Apps ha fatto emergere la loro natura: essi sono \emph{software} utili nei casi in cui si debba realizzare un'applicazione semplice rapidamente, ma è da considerare che sono strumenti ancora relativamente nuovi, quindi privi di una documentazione esaustiva e aventi \emph{features} soggette a frequenti e importanti modifiche.\\
 Offrono la possibilità di connettersi agevolmente con i servizi Microsoft ma presentano allo stesso tempo un alto numero di limitazioni, le quali non offrono la libertà di sviluppo ottenibile con i consolidati strumenti e linguaggi di programmazione.\\ 
-Lo studio da me svolto durante lo \emph{stage} ha fatto emergere l'effettiva possibilità di applicare le metodologie \gls{DevOps} a progetti realizzati con Power Auotmate e Power Apps.\\
+Lo studio da me svolto durante lo \emph{stage} ha fatto emergere l'effettiva possibilità di applicare le metodologie \gls{DevOps} a progetti realizzati con Power Auotmate e Power Apps.\\\\
 Tramite periodi di sviluppo collaborativo, ho dimostrato la possibilità di applicare strategie di collaborazione e condivisione delle risorse tra membri del \emph{team} di sviluppo.\\ 
 Ho definito le norme di versionamento che il \emph{team} deve seguire per organizzare efficacemente tutte le parti che compongono un progetto Power Automate/Power Apps, testando la possibilità di effettuare il ripristino di specifiche versioni rilasciate.\\ 
 Ho applicato metodologie di analisi statica del codice e \emph{testing} dinamico, sia mediante strumenti nativi che esterni, al fine di verificare il corretto funzionamento e garantire la qualità dei prodotti realizzati.\\ 
 Ho dimostrato la possibilità di gestire il ciclo di vita del \emph{software} prodotto, relativamente alle tecnologie in oggetto, comprese le fasi di distribuzione dei prodotti e il loro monitoraggio.\\ 
 Ogni nozione da me acquisita, ogni norma stipulata e ogni soluzione implementata è stata documentata ed è stata resa disponibile al personale attraverso gli strumenti di condivisione aziendale. 
 
-\subsection{Risultati quantitativi}
-I documenti che ho prodotto durante lo \emph{stage} sono:
-\begin{itemize}
-    \item “Analisi statica del codice” 
-    \item “Norme di versionamento” 
-    \item “Test dinamici”
-    \item “Guida Jenkins” 
-    \item “Angular in Jenkins” 
-    \item Presentazione sulle funzionalità, i lati positivi e i lati negativi di Power Automate e Power Apps 
-    \item Presentazione relativa alle limitazioni di tali tecnologie e le rispettive soluzioni individuate 
-    \item Presentazione relativa al versionamento e all'analisi statica del codice 
-    \item Presentazione relativa ai processi Build e ai \emph{test} dinamici 
-    \item Presentazione finale realizzata in collaborazione con gli altri stagisti universitari riguardo a quanto fatto durante i nostri \emph{stage} 
-\end{itemize}
+\subsection{Risultati qualitativi}
+\begingroup
+\renewcommand\arraystretch{1.3}
+\begin{longtable}{|p{11cm}|}
+    \caption{Documenti che ho prodotto durante lo \emph{stage}.}
+    \label{tab:risultatiQualitativi}\\
+    \hline \multicolumn{1}{|c|}{\textbf{Documenti prodotti}}\\ \hline \endfirsthead
+    \hline \multicolumn{1}{|c|}{\textbf{Documenti prodotti}}\\ \hline \endhead
+    \hline \endhead
+    \hline \endfoot
+    \hline \endlastfoot
+    \hline “Analisi statica del codice”\\
+    \hline “Norme di versionamento”\\
+    \hline “Test dinamici”\\
+    \hline “Guida Jenkins”\\
+    \hline “Angular in Jenkins”\\
+    \hline Presentazione sulle funzionalità, i lati positivi e i lati negativi di Power Automate e Power Apps\\
+    \hline Presentazione relativa alle limitazioni di tali tecnologie e le rispettive soluzioni individuate\\
+    \hline Presentazione relativa al versionamento e all'analisi statica del codice\\
+    \hline Presentazione relativa ai processi Build e ai \emph{test} dinamici\\
+    \hline Presentazione finale realizzata in collaborazione con gli altri stagisti universitari riguardo a quanto fatto durante i nostri \emph{stage}\\
+\end{longtable}
+\endgroup
  
-\noindent Il software prodotto è stato: 
-\begin{itemize}
-    \item PoC sui flussi approvativi 
-    \item PoC sull'integrazione di chiamate \gls{http} con i flussi  
-    \item Jenkinsfile per progetti Power Automate/Power Apps 
-    \item \emph{Script} Excel per la creazione automatica di tabelle 
-    \item \emph{Script} Node.js per il \emph{test} di flussi tramite chiamate \gls{http} 
-    \item Sviluppo di funzioni Fx sul prodotto aziendale Report di visita 
-    \item Flussi per il \emph{retreive} dei dati da liste SharePoint 
-    \item Progetto di esempio Angular 
-    \item Jenkinsfile relativo al progetto di esempio Angular 
-\end{itemize}
+\subsection{Risultati quantitativi}
+\begingroup
+\renewcommand\arraystretch{1.3}
+\begin{longtable}{|p{11cm}|}
+    \caption{Software che ho prodotto durante lo \emph{stage}.}
+    \label{tab:risultatiQuantitativi}\\
+    \hline \multicolumn{1}{|c|}{\textbf{Software prodotti}}\\ \hline \endfirsthead
+    \hline \multicolumn{1}{|c|}{\textbf{Software prodotti}}\\ \hline \endhead
+    \hline \endfoot
+    \hline \endlastfoot
+    \hline PoC sui flussi approvativi\\
+    \hline PoC sull'integrazione di chiamate \gls{http} con i flussi\\
+    \hline Jenkinsfile per progetti Power Automate/Power Apps\\
+    \hline \emph{Script} Excel per la creazione automatica di tabelle\\
+    \hline \emph{Script} Node.js per il \emph{test} di flussi tramite chiamate \gls{http}\\
+    \hline Sviluppo di funzioni Fx sul prodotto aziendale Report di visita\\
+    \hline Flussi per il \emph{retreive} dei dati da liste SharePoint\\
+    \hline Progetto di esempio Angular\\
+    \hline Jenkinsfile relativo al progetto di esempio Angular\\
+\end{longtable}
+\endgroup
+
