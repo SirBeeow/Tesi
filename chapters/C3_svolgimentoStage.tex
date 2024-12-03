@@ -1,6 +1,6 @@
 \chapter{Svolgimento \emph{stage}}
 \label{cap:svolgimentoStage}
-In questo capitolo vengono descritte tutte le attività da me svolte durante lo \emph{stage}, divise nelle sezioni:
+Questo capitolo descrive tutte le attività da me svolte durante lo \emph{stage}, divise nelle sezioni:
 \begin{itemize}
 	\item \textbf{Requisiti}: ho espresso l'analisi avvenuta sugli obiettivi di \emph{stage} in maniera specifica e codificata.
     \item \textbf{Utilizzo delle tecnologie}: ho raccolto tutte le attività legate all'utilizzo di Power Automate e Power Apps da me svolte. Queste azioni sono conseguenza dell'obiettivo aziendale relativo alla comprensione delle funzionalità, dei lati positivi e dei lati negativi di tali tecnologie.
@@ -115,7 +115,7 @@ Esso viene eseguito automaticamente quando viene creato un \emph{file} dentro ad
 Dopo aver ricevuto la risposta, il flusso agisce di conseguenza spostando il \emph{file} iniziale in un \emph{path} specifico in funzione dell'esito dell'approvazione.
 Viene in aggiunta eseguito un controllo sui \emph{file} già presenti nel percorso di destinazione e, nel caso fosse già presente un documento omonimo, il documento da spostare viene rinominato.\\
 Questo controllo avviene ciclicamente incrementando un valore posto nel nome del \emph{file} fino al verificarsi dell'effettiva possibilità di eseguire lo spostamento.\\
-Infine viene eseguito uno \emph{script} Excel il quale scrive in una tabella di \emph{log} le informazioni relative allo spostamento.
+Infine, viene eseguito un “Office Script” Excel il quale scrive in una tabella di \emph{log} le informazioni relative allo spostamento.
 \begin{figure}[htbp] 
     \centering 
     \includegraphics[width=0.6\columnwidth]{flussoApprovazioni} 
@@ -170,7 +170,7 @@ L'adozione delle Soluzioni, comporta la possibilità aggiuntiva di poter visiona
     \label{fig:versionHistory}
 \end{figure}
 
-\newpage \subsection{Applicazioni aziendali}
+\newpage \subsection{Possibili destinazioni di applicazione}
 Il principale obiettivo dello \emph{stage} è analizzare le tecnologie per valutare l'applicabilità delle pratiche di \gls{DevOps} ai progetti sviluppati con Power Automate e Power Apps.
 Tuttavia, in accordo con il \emph{tutor} aziendale, abbiamo deciso fin dall'inizio di alternare queste attività con fasi di sviluppo su applicazioni aziendali, così da approfondire la conoscenza delle tecnologie e acquisire maggiore operatività in modo efficace.\\
 Insieme al membro del \emph{team} di sviluppo responsabile per la realizzazione delle applicazioni Power Apps e dei flussi Power Automate aziendali, ho affrontato problemi di sviluppo di vario genere in funzione delle necessità del momento, potendo analizzare diversi prodotti aziendali.\\
@@ -210,7 +210,7 @@ Le principali difficoltà che ho affrontato sono relative ai limiti sul numero d
     \item Dopo aver ottenuto i dati desiderati, sfruttando particolari funzionalità di indicizzazione delle liste SharePoint, ho incontrato difficoltà legate all'aggiornamento grafico di alcuni componenti fondamentali dell'applicazione utilizzati per mostrare dinamicamente i contenuti ricavati.\\
     Ho risolto tale problema in collaborazione con il \emph{team} di sviluppo mediante la realizzazione di un nuovo componente \emph{custom}.  
 \end{itemize}
-Al fine di fare \emph{test} su liste SharePoint, popolate dinamicamente da un numero elevato di elementi, ho generato tabelle Excel in maniera automatica scrivendo appositamente degli “Office Scripts”.
+Al fine di fare \emph{test} su liste SharePoint, popolate dinamicamente da un numero elevato di elementi, ho generato tabelle Excel in maniera automatica attraverso l'esecuzione di uno \emph{script} da me prodotto in linguaggio Python.
 
 \subsubsection*{Registro accessi}
 Applicazione realizzata al fine di gestire agevolmente i \emph{check-in} e \emph{check-out} lavorativi del personale.\\
@@ -255,7 +255,7 @@ Essi sono unità di lavoro configurabili che rappresentano un'attività o un pro
 
 \newpage \noindent Una \emph{pipeline} Jenkins è una sequenza di fasi chiamate "Stage", eseguite in serie o in parallelo, responsabili di specifiche operazioni definite dall'utente, per esempio \emph{build}, \emph{test}, \emph{deploy}.\\
 Esse possono essere definite tramite il linguaggio di programmazione Groovy oppure tramite l'interfaccia grafica di Jenkins.\\
-Questo strumento permette dunque di fornire servizi di \gls{Continuous Integration}, ed è indicato per l'applicazione di alcune fasi di \gls{DevOps} come Build e Test, il caricamento automatico dei \emph{file} sul \emph{repository} di versionamento desiderato e l'autenticazione automatica ai servizi Microsoft tramite comandi Power Platform CLI.\\
+Questo strumento permette dunque di fornire servizi di \gls{Continuous Integration}, ed è indicato per l'applicazione di alcune fasi di \gls{DevOps} come \emph{Build} e \emph{Test}, il caricamento automatico dei \emph{file} sul \emph{repository} di versionamento desiderato e l'autenticazione automatica ai servizi Microsoft tramite comandi Power Platform CLI.\\
 Quest'ultima è un'interfaccia a riga di comando che offre la possibiltà di eseguire un insieme di comandi specifici atti all'autenticazione e alla gestione degli ambienti e delle Microsoft Solutions.\\
 Riguardo alla scelta del tipo di Job da adottare in Jenkins, ho individuato il "Multibranch Pipeline Job".
 Esso permette di collegare un \emph{repository} Git e ha la possibilità di gestire automaticamente una \emph{pipeline} indipendente, contenuta in un apposito \emph{file} chiamato "Jenkinsfile", per ogni \emph{branch}.
@@ -269,8 +269,7 @@ Esse sono applicazioni integrate in GitHub che permettono il collegamento tra i 
     \label{fig:githubAppPermessi}
 \end{figure}
 
-\noindent Le fasi di \gls{DevOps} sono:
-\subsection{Plan}
+\subsection{\emph{Plan}}
 Essendo la fase iniziale del ciclo, ha lo scopo di definire i requisiti, pianificare il ciclo di vita del progetto e identificarne le metodologie di lavoro.
 Adottando una metodologa iterativa, è consono che la pianificazione e le conseguenti fasi successive, possano subire modifiche rispetto alle precedenti pianificazioni.\\\\
 Come strumenti identificati per la pianificazione delle attività ho utilizzato Planner e Taiga.
@@ -284,12 +283,12 @@ Esse vengono eseguite da parte di un'applicazione \emph{web} al fine di permette
 A causa delle limitazioni incontrate nell'utilizzo di servizi di \emph{webhooks}, e della fine dello svolgimento dello \emph{stage} della persona con cui collaboravo, tali studi non hanno portato a soluzioni effettivamente utilizzate.
 
 
-\subsection{Code}
-Dopo aver compreso gli obiettivi progettuali e aver identificato il modo per soddisfarli, vengono sviluppate le soluzioni individuate seguendo le metodologie e le norme definite in fase Plan.\\
-Essendo il progetto di \emph{stage} basato su tecnologie non sviluppabili tramite strumenti tradizionali, come IDE non proprietari e linguaggi di programmazione consolidati, l'analisi della fase Code è stata necessaria per comprendere le funzionalità disponibili agli utenti al fine di sviluppare tali prodotti.\\
+\subsection{\emph{Code}}
+Dopo aver compreso gli obiettivi progettuali e aver identificato il modo per soddisfarli, vengono sviluppate le soluzioni individuate seguendo le metodologie e le norme definite in fase \emph{Plan}.\\
+Essendo il progetto di \emph{stage} basato su tecnologie non sviluppabili tramite strumenti tradizionali, come IDE non proprietari e linguaggi di programmazione consolidati, l'analisi della fase \emph{Code} è stata necessaria per comprendere le funzionalità disponibili agli utenti al fine di sviluppare tali prodotti.\\
 È compresa in questa fase anche la ricerca avvenuta al fine di individuare le metodologie e gli strumenti adatti a sviluppare progetti con le tecnologie in oggetto in maniera collaborativa e adottando un efficace metodo di versionamento.\\
 Questo ha necessitato di uno studio sullo strumento Git, già ampiamente affrontato durante il percorso di studi universitari.\\
-Infine, è compresa nella fase Code anche l'attività di analisi statica del codice, la quale supporta le fasi di sviluppo identificando e segnalando eventuali errori nel codice sorgente senza la necessità di eseguirlo.
+Infine, è compresa nella fase \emph{Code} anche l'attività di analisi statica del codice, la quale supporta le fasi di sviluppo identificando e segnalando eventuali errori nel codice sorgente senza la necessità di eseguirlo.
 
 \subsubsection*{Sistema di versionamento}
 Il versionamento di tutte le parti dei progetti realizzati con Power Apps e Power Automate è avvenuto in un singolo \emph{repository} Git in modo da garantire una migliore organizzazione dei dati e facilità di ripristino di specifiche versioni.\\
@@ -333,13 +332,13 @@ Inoltre ho redatto i documenti “Norme di progetto” e “Analisi statica” e
 Infine ho prodotto una presentazione PowerPoint contenente le principali informazioni presenti nei documenti citati e l'ho esposta al \emph{team} di sviluppo.\\
 
 
-\subsection{Build}
+\subsection{\emph{Build}}
 Fase relativa alla creazione dei pacchetti e dei \emph{file} eseguibili costruiti partendo dal codice sorgente prodotto nella fase precedente.
 Il risultato di questa operazione rappresenta il prodotto sul quale verranno effettuati i \emph{test} e le verifiche necessarie.\\\\
 I \emph{file} generati da Power Automate e Power Apps, al fine di rappresentare i flussi e le applicazioni create nelle rispettive interfacce di sviluppo, sono rappresentati da un pacchetto compresso ZIP contenente un insieme di \emph{file} generati in funzione dei singoli blocchi e componenti.\\
 Essi sono principalmente di tipo JSON, e .msapp e possiedono una struttura di difficile comprensione, pertanto non sono pensati per uno sviluppo manuale diretto.\\
 Le Microsoft Solution sono rappresentate dai \emph{file} corrispondenti a quelli dei flussi e delle applicazioni in esse contenuti, e nessuno di essi rappresenta un \emph{file} eseguibile.\\
-Come metodo per l'esecuzione della fase Build automatica, ho individuato i comandi forniti dalla Power Platform CLI, automatizzati da un Job Jenkins, al fine di esportare i pacchetti relativi alle Soluzioni desiderate.\\
+Come metodo per l'esecuzione della fase \emph{Build} automatica, ho individuato i comandi forniti dalla Power Platform CLI, automatizzati da un Job Jenkins, al fine di esportare i pacchetti relativi alle Soluzioni desiderate.\\
 Il relativo Jenkinsfile da me prodotto esegue le seguenti operazioni:
 \begin{itemize}
     \item Seleziona il corretto \emph{branch} del \emph{repository} ed esegue un comando \emph{pull}
@@ -349,29 +348,29 @@ Il relativo Jenkinsfile da me prodotto esegue le seguenti operazioni:
     \item Controlla l'eventuale presenza di una omonima Solution già presente nel \emph{repository} e, se presente, la elimina 
     \item Carica il pacchetto relativo alla nuova versione della Solution nel \emph{repository}
 \end{itemize}
-Ho redatto il documento “Guida Jenkins”, il quale comprende tutte le nozioni e le norme relative all'adozione di Jenkins, al fine di applicare la fase Build ai progetti Power Automate e Power Apps e l'ho condiviso con il \emph{team} di sviluppo e con il \emph{\emph{tutor}} aziendale.\\\\
+Ho redatto il documento “Guida Jenkins”, il quale comprende tutte le nozioni e le norme relative all'adozione di Jenkins, al fine di applicare la fase \emph{Build} ai progetti Power Automate e Power Apps e l'ho condiviso con il \emph{team} di sviluppo e con il \emph{\emph{tutor}} aziendale.\\\\
 
 
-\subsection{Test}
-Ottenuto l'artefatto generato dalla fase Build, esso può essere testato mediante l'utilizzo di svariati strumenti appositi.\\
+\subsection{\emph{Test}}
+Ottenuto l'artefatto generato dalla fase \emph{Build}, esso può essere testato mediante l'utilizzo di svariati strumenti appositi.\\
 I \emph{test} dinamici possono essere di diverso tipo: 
 \begin{itemize}
-    \item Test di unità: verifica che le singole unità di codice, per esempio funzioni, metodi o classi, funzionino come previsto.
-    \item Test di integrazione: verifica che più parti di codice o servizi interagiscano tra loro correttamente.
-    \item Test di carico: verifica il comportamento del sistema sotto carico normale ed elevato.
-    \item Test di sicurezza: individua le eventuali vulnerabilità o minacce di sicurezza presenti nel sistema. 
+    \item \emph{Test} di unità: verifica che le singole unità di codice, per esempio funzioni, metodi o classi, funzionino come previsto.
+    \item \emph{Test} di integrazione: verifica che più parti di codice o servizi interagiscano tra loro correttamente.
+    \item \emph{Test} di carico: verifica il comportamento del sistema sotto carico normale ed elevato.
+    \item \emph{Test} di sicurezza: individua le eventuali vulnerabilità o minacce di sicurezza presenti nel sistema. 
 \end{itemize}
 
-A causa della natura dei \emph{file} generati dalla fase Build è emerso, similmente all'analisi statica del codice, la necessità di utilizzare principalmente gli strumenti nativi forniti da Microsoft per eseguire \emph{test} dinamici.\\
+A causa della natura dei \emph{file} generati dalla fase \emph{Build} è emerso, similmente all'analisi statica del codice, la necessità di utilizzare principalmente gli strumenti nativi forniti da Microsoft per eseguire \emph{test} dinamici.\\
 
-\subsubsection*{Test su Power Automate}
+\subsubsection*{\emph{Test} su Power Automate}
 Per i flussi Power Automate è disponibile la funzione "Test" presente nell'interfaccia grafica di sviluppo.\\
 Essa permette l'esecuzione del flusso e la visione dei suoi risultati, compresi gli \emph{input} e \emph{output} di ogni azione e il loro tempo di esecuzione. 
 Inoltre, in caso di errore, sono fornite le relative informazioni. 
 \begin{figure}[htbp] 
     \centering 
     \includegraphics[width=1\columnwidth]{testFlusso} 
-    \caption{Funzionalità Test nei flussi Power Automate.}
+    \caption{Funzionalità "Test" nei flussi Power Automate.}
     \label{fig:testFlusso}
 \end{figure}
 
@@ -410,13 +409,13 @@ Ai fini di rendere automatico questo processo, ho incluso l'esecuzione dello \em
 Tale pratica garantisce la qualità e la funzionalità attesa dai flussi testati, però è da considerare che la natura dei prodotti realizzati con Power Automate richiede che essi vengano modificati, al fine di essere predisposti alla ricezione e alla risposta delle chiamate \gls{http} di \emph{test}.
 Inoltre è da tenere in considerazione che tali funzioni necessitano della licenza \emph{premium}.\\
 
-\subsubsection*{Test su Power Apps}
+\subsubsection*{\emph{Test} su Power Apps}
 Per quanto concerne i \emph{test} su applicazioni Power Apps, sono presenti diversi strumenti nativi per verificare la loro corretta esecuzione.\\
 "Test studio" è uno strumento che permette di eseguire l'applicazione e registrare tutte le azioni intraprese dall'utente (o definite manualmente), al fine di generare uno \emph{script} di \emph{test} che possa ripetere tali azioni e fornire un riscontro.
 \begin{figure}[htbp] 
     \centering 
     \includegraphics[width=1\columnwidth]{testStudio} 
-    \caption{Parte dell'interfaccia di Test studio.}
+    \caption{Parte dell'interfaccia di "Test studio".}
     \label{fig:testStudio}
 \end{figure}
 \newline \noindent Ho esplorato la possibilità di estrarre tali \emph{script}, tramite la funzione “Scarica suite”, ma non ho integrato tale strategia nel sistema di \emph{testing} a causa del numero considerevole di limitazioni attualmente presenti per Test Studio:\\
@@ -427,10 +426,10 @@ Nel caso in cui si verificassero degli errori durante tale operazione, i loro de
 Ho infine prodotto il documento “Test dinamici”, contenente tutte le informazioni relative ai metodi individuati per effettuare \emph{test} su Power Automate e Power Apps, sia con strumenti nativi che esterni.
 Ho aggiornato il documento “Guida Jenkins” al fine di contenerne anche le nozioni riguardanti quanto descritto.\\
 Ho poi condiviso tali documenti con il \emph{team} di sviluppo e con il \emph{\emph{tutor}} aziendale.\\
-Inoltre ho prodotto, ed esposto al \emph{team} di sviluppo, una presentazione PowerPoint contenente le principali informazioni apprese e le soluzioni individuate e sviluppate relativamente alle fasi Build e Test. 
+Inoltre ho prodotto, ed esposto al \emph{team} di sviluppo, una presentazione PowerPoint contenente le principali informazioni apprese e le soluzioni individuate e sviluppate relativamente alle fasi \emph{Build} e \emph{Test}. 
 
 
-\subsection{Release}
+\subsection{\emph{Release}}
 Quando il prodotto è stato creato e testato, esso è considerato pronto per essere reso disponibile ai clienti, e viene quindi rilasciato identificandone una versione specifica.\\
 La strategia identificata per definire i rilasci è l'assegnazione di specifici \emph{tag} alfanumerici ai \emph{commit} nel \emph{repository} Git.\\
 Tale codice è composto dalla lettera "v" seguita da tre cifre separate da un carattere ".", per esempio "v1.0.0".\\
@@ -445,7 +444,7 @@ Il criterio di avanzamento delle cifre è:
 \end{itemize}
     
 
-\subsection{Deploy}
+\subsection{\emph{Deploy}}
 Durante questa fase, una versione rilasciata del prodotto viene distribuita nello specifico ambiente di produzione in cui gli utenti finali la utilizzeranno, garantendone il corretto funzionamento.\\\\
 I pacchetti di dati generati relativamente ai prodotti Power Apps, Power Automate e alle Micorsoft Solutions, permettono non solo di essere esportati, ma anche di venire importati in ambienti diversi.\\
 In tale funzione ho individuato il metodo per distribuire i prodotti negli ambienti di produzione.\\\\
@@ -454,13 +453,13 @@ Al fine di agevolare il collegamento agli \emph{account} e ai servizi Microsoft 
 Essi sono entità che rappresentano il collegamento tra un'applicazione, un servizio o un flusso e una risorsa esterna, e offrono la possibilità di essere cambiati in maniera dinamica durante la fase di importazione in un ambiente.
     
 
-\subsection{Operate}
+\subsection{\emph{Operate}}
 La gestione e il funzionamento dell'applicazione in produzione viene garantita tramite attività come l'amministrazione e la manutenzione dei \emph{server} e la risoluzione dei problemi. 
 Inoltre, l'operatività delle soluzioni implementate viene monitorata tramite il \emph{feedback} fornito dal cliente.\\
 Nel caso in cui si verificasse un problema con tale prodotto, viene fornito immediato supporto al fine di soddisfare nuovamente le attese.\\
 Nel caso in cui il problema riscontrato fosse molto problematico, il sistema di versionamento definito permette il ripristino del prodotto ad una precedente versione stabile. 
 
-\subsection{Monitor}
+\subsection{\emph{Monitor}}
 Al fine di garantire affidabilità e buone prestazioni del sistema distribuito, il suo comportamento viene osservato tramite strumenti che ne raccolgono e analizzano i dati. 
 Vengono inoltre raccolti i \emph{feedback} degli utenti finali e dei clienti al fine di migliorare la qualità del prodotto.\\
 Il monitoraggio dei \emph{report} Jenkins, delle esecuzioni dei flussi Power Automate e delle esecuzioni delle applicazioni Power Apps, sono nativamente forniti dai rispettivi servizi.
@@ -503,7 +502,7 @@ Infine ho generato il documento “Angular in Jenkins”, contenente quanto affr
 
 
 
-\section{Risultati raggiunti}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Visione d'insieme}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Risultati qualitativi}
 Lo studio delle tecnologie Power Automate e Power Apps ha fatto emergere la loro natura: essi sono \emph{software} utili nei casi in cui si debba realizzare un'applicazione semplice rapidamente, ma è da tenere in considerazione il fatto che essi sono relativamente nuovi.
 Questo comporta una scarsa presenza di documentazione esaustiva e la presenza di frequenti e importanti modifiche alle \emph{features}.\\
@@ -516,6 +515,8 @@ Ho dimostrato la possibilità di gestire il ciclo di vita del \emph{software} pr
 Ogni nozione da me acquisita, ogni norma stipulata e ogni soluzione implementata è stata da me documentata e resa disponibile al personale attraverso gli strumenti di condivisione aziendale. 
 
 \subsection{Risultati quantitativi}
+Questa sottosezione racchiude le informazioni utili a quantificare il lavoro da me svolto durante lo \emph{stage} in termini di documenti e \emph{software} prodotti.\\
+I documenti da me redatti sono formati da cinque \emph{file} di testo, realizzati con Microsoft Word, e altrettante presentazioni prodotte con Microsoft PowerPoint.
 \begingroup
 \renewcommand\arraystretch{1.3}
 \begin{longtable}{|p{11cm}|}
@@ -533,28 +534,37 @@ Ogni nozione da me acquisita, ogni norma stipulata e ogni soluzione implementata
     \hline Presentazione sulle funzionalità, i lati positivi e i lati negativi di Power Automate e Power Apps\\
     \hline Presentazione relativa alle limitazioni di tali tecnologie e le rispettive soluzioni individuate\\
     \hline Presentazione relativa al versionamento e all'analisi statica del codice\\
-    \hline Presentazione relativa ai processi Build e ai \emph{test} dinamici\\
+    \hline Presentazione relativa ai processi \emph{Build} e ai \emph{test} dinamici\\
     \hline Presentazione finale realizzata in collaborazione con gli altri stagisti universitari riguardo a quanto fatto durante i nostri \emph{stage}\\
 \end{longtable}
 \endgroup
  
+\noindent I \emph{software} da me realizzati comprendono flussi Power Automate, \emph{script} di natura diversa e nove funzioni Power Fx.
+La quantità del lavoro svolto viene espressa, relativamente, come: Azioni, righe di codice e righe di codice complessive.
 \begingroup
 \renewcommand\arraystretch{1.3}
-\begin{longtable}{|p{11cm}|}
-    \caption{Software che ho prodotto durante lo \emph{stage}.}
+\begin{longtable}{|p{9cm}|c|}
+    \caption{\emph{Software} che ho prodotto durante lo \emph{stage}.}
     \label{tab:risultatiQuantitativi}\\
-    \hline \multicolumn{1}{|c|}{\textbf{Software prodotti}}\\  \endfirsthead
-    \hline \multicolumn{1}{|c|}{\textbf{Software prodotti}}\\  \endhead
+    \hline \multicolumn{1}{|c|}{\textbf{Software prodotti}} & \multicolumn{1}{|c|}{\textbf{Quantità}}\\  \endfirsthead
+    \hline \multicolumn{1}{|c|}{\textbf{Software prodotti}} & \multicolumn{1}{|c|}{\textbf{Quantità}}\\  \endhead
     \endfoot
     \hline \endlastfoot
-    \hline PoC sui flussi approvativi\\
-    \hline PoC sull'integrazione di chiamate \gls{http} con i flussi\\
-    \hline Jenkinsfile per progetti Power Automate/Power Apps\\
-    \hline \emph{Script} Excel per la creazione automatica di tabelle\\
-    \hline \emph{Script} Node.js per il \emph{test} di flussi tramite chiamate \gls{http}\\
-    \hline Sviluppo di funzioni Fx sul prodotto aziendale "Report di visita"\\
-    \hline Flussi per il \emph{retreive} dei dati da liste SharePoint\\
-    \hline Progetto di esempio Angular\\
-    \hline Jenkinsfile relativo al progetto di esempio Angular\\
+    \hline PoC sui flussi approvativi & 17 Azioni\\
+    \hline Flusso per il \emph{retrieve} dei dati filtrati da liste SharePoint senza utilizzo di chiamate \gls{http} & 4 Azioni\\
+    \hline Flusso per il \emph{retrieve} dei dati filtrati da liste SharePoint mediante utilizzo di chiamate \gls{http} & 4 Azioni\\
+    \hline Flusso per il \emph{retrieve} iterativo e precaricamento dei dati da liste SharePoint & 19 Azioni\\
+    \hline Flusso per il \emph{retrieve} dei dati da SQL server & 4 Azioni\\
+    \hline Flusso esplorativo per la sincronizzazione tra Planner e Taiga & 6 Azioni\\
+    \hline PoC sull'integrazione di chiamate \gls{http} con i flussi & 3 Azioni\\
+    \hline \emph{Script} Node.js per il \emph{test} di flussi tramite chiamate \gls{http} & 65 righe\\
+    \hline Jenkinsfile per progetti Power Automate/Power Apps & 108 righe\\
+    \hline \emph{Script} Excel per l'aggiunta automatica di righe nel \emph{log} delle approvazioni & 7 righe\\
+    \hline \emph{Script} Python per la creazione automatica di tabelle Excel & 31 righe\\
+    \hline Progetto di esempio realizzato con Angular & 120 righe\\
+    \hline \emph{Suite} di \emph{test} gestiti dallo strumento Karma per il progetto di esempio realizzato con Angular & 27 righe\\
+    \hline Jenkinsfile relativo al mio progetto di esempio realizzato con Angular & 70 righe\\
+    \hline Jenkinsfile relativo ai progetti aziendali realizzati con Angular & 88 righe\\
+    \hline Sviluppo di funzioni Power Fx sul prodotto aziendale "Report di visita" &  15 righe complessive\\
 \end{longtable}
 \endgroup
