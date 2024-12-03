@@ -2,11 +2,13 @@
 \label{cap:valutazioneRetrospettiva}
 
 \section{Raggiungimento obiettivi}
-\begin{longtable}{|c|p{7cm}|c|}
+\begingroup
+\renewcommand\arraystretch{1.3}
+\begin{longtable}{|c|p{8cm}|c|}
     \caption{Soddisfacimento degli obiettivi obbligatori.}
     \label{tab:soddObbObbligatori}\\
-    \hline \textbf{Requisito} & \textbf{Azioni risolutive} & \textbf{Soddisfacimento}\\ \endfirsthead
-    \hline \textbf{Requisito} & \textbf{Azioni risolutive} & \textbf{Soddisfacimento}\\ \endhead
+    \hline \textbf{Requisito} & \textbf{Azioni risolutive} & \textbf{Esito}\\ \endfirsthead
+    \hline \textbf{Requisito} & \textbf{Azioni risolutive} & \textbf{Esito}\\ \endhead
     \hline \endfoot
     \hline \endlastfoot
     \hline O1.1  & A seguito dell'analisi svolta sui flussi Power Automate, ho compreso le informazioni relative alle sue funzionalità, caratteristiche, punti positivi e punti negativi. Ho redatto il documento “Presentazione Power Automate e Power Apps” al fine di esporre il risultato di tali ricerche. & Soddisfatto\\
@@ -21,33 +23,34 @@
     \hline \textbf{O4}  & Ho studiato la metodologia \gls{DevOps} e tutte le sue fasi. Ho studiato le possibilità di applicarle alle tecnologie Power Automate e Power Apps, individuando soluzioni specifiche che ho poi sviluppato e integrato ai relativi progetti aziendali. Al fine di condividere con il \emph{team} tali informazioni, ho redatto i documenti “Norme di versionamento”, “Analisi statica del codice” e “Test dinamici”. Inoltre, al fine di descrivere la tecnologia utilizzata per gestire la maggior parte di queste fasi, ho redatto il documento “Guida Jenkins”. & Soddisfatto\\
 \end{longtable}
 
-\begin{longtable}{|c|p{7cm}|c|}
+\begin{longtable}{|c|p{8cm}|c|}
     \caption{Soddisfacimento degli obiettivi desiderabili.}
     \label{tab:soddObbDesiderabili}\\
-    \hline \textbf{Requisito} & \textbf{Azioni risolutive} & \textbf{Soddisfacimento}\\ \endfirsthead
-    \hline \textbf{Requisito} & \textbf{Azioni risolutive} & \textbf{Soddisfacimento}\\ \endhead
+    \hline \textbf{Requisito} & \textbf{Azioni risolutive} & \textbf{Esito}\\ \endfirsthead
+    \hline \textbf{Requisito} & \textbf{Azioni risolutive} & \textbf{Esito}\\ \endhead
     \hline \endfoot
     \hline \endlastfoot
-    \textbf{D1}  & & Soddisfatto\\
-    \hline D2.1  & & Soddisfatto\\
-    \hline D2.2  & & Soddisfatto\\
-    \hline D2.3  & & Soddisfatto\\
-    \hline D2.4  & & Soddisfatto\\
-    \hline \textbf{D2}  & & Soddisfatto\\
-    \hline \textbf{D3}  & & Soddisfatto\\
+    \hline \textbf{D1}  & Ho collaborato con gli altri due stagisti universitari al fine di condividere reciprocamente, mediante appositi \emph{meeting} e condivisione dei documenti prodotti, le attività svolte e le nozioni apprese durante i nostri \emph{stage}. Ho con loro collaborato al fine di individuare una soluzione che sincronizzasse gli strumenti Planner e Taiga mediante flussi Power Automate. Inoltre abbiamo discusso e definito parte delle strategie da adottare relativamente al sistema di versionamento per progetti Power Automate e Power Apps. & Soddisfatto\\
+    \hline D2.1  & Ho realizzato un flusso Power Automate al fine di dimostrare la fattibilità tecnologica di flussi in grado di inviare richieste di approvazione e reagire contestualmente alla risposta ricevuta. & Soddisfatto\\
+    \hline D2.2  & Ho realizzato un flusso Power Automate per dimostrare la fattibilità tecnologica di flussi in grado di ricevere e inviare chiamate \gls{http}, al fine di scambiare dati con \emph{script} e servizi esterni. & Soddisfatto\\
+    \hline D2.3  & Ho realizzato un Multibranch \emph{pipeline} Job Jenkins, e relativo Jenkinsfile, al fine di dimostrare l'applicabilità della fase \emph{Build} di \gls{DevOps} a progetti realizzati con Power Automate e Power Apps. Esso include uno \emph{Stage} responsabile per l'esportazione dei prodotti \emph{software}, sotto forma di pacchetti, e il loro caricamento nel \emph{repository} Git. & Soddisfatto\\
+    \hline D2.4  & Ho realizzato un Multibranch \emph{pipeline} Job Jenkins, e relativo Jenkinsfile, al fine di dimostrare l'applicabilità della fase \emph{Test} di \gls{DevOps} a progetti realizzati con Power Automate e Power Apps. Esso include uno \emph{Stage} responsabile per l'esecuzione di uno \emph{script} il quale, tramite chiamate \gls{http}, esegue un flusso Power Automate ottenendone l'\emph{output}. Quest'ultimo viene poi automaticamente analizzato al fine di testarne la correttezza. & Soddisfatto\\
+    \hline \textbf{D2}  & Ho testato le soluzioni individuate durante l'analisi e la progettazione mediante dimostrazioni e PoC. Ho poi condiviso con il \emph{team} i documenti relativi ai risultati ottenuti, i quali comprendono i PoC sull'utilizzo di Jenkins e alle \emph{features} disponibili con l'utilizzo di flussi Power Automate. & Soddisfatto\\
+    \hline \textbf{D3}  & Ho collaborato con lo stagista universitario incaricato di analizzare l'applicabilità delle pratiche \gls{DevOps} in ambito \gls{Sistemi}, al fine di comprenderne le soluzioni individuate, i limiti tecnologici e i benefici guadagnati. Questo è avvenuto tramite appositi \emph{meeting} e condivisione dei documenti redatti. & Soddisfatto\\
 \end{longtable}
 
-\begin{longtable}{|c|p{7cm}|c|}
+\begin{longtable}{|c|p{8cm}|c|}
     \caption{Soddisfacimento degli obiettivi facoltativi.}
     \label{tab:soddObbFacoltativi}\\
-    \hline \textbf{Obiettivo} & \textbf{Azioni risolutive} & \textbf{Soddisfacimento}\\  \endfirsthead
-    \hline \textbf{Obiettivo} & \textbf{Azioni risolutive} & \textbf{Soddisfacimento}\\  \endhead
+    \hline \textbf{Obiettivo} & \textbf{Azioni risolutive} & \textbf{Esito}\\  \endfirsthead
+    \hline \textbf{Obiettivo} & \textbf{Azioni risolutive} & \textbf{Esito}\\  \endhead
     \hline \endfoot
     \hline \endlastfoot
-    \textbf{F1}  & & Soddisfatto\\
-    \hline \textbf{F2}  & & Soddisfatto\\
-    \hline \textbf{F3}  & & Soddisfatto\\
+    \hline \textbf{F1}  & Ho studiato ed esplorato lo strumento Angular, e con esso ho realizzato un'applicazione \emph{web} contenente testo e immagini. & Soddisfatto\\
+    \hline \textbf{F2}  & Ho applicato le principali fasi di \gls{DevOps} al progetto Angular da me realizzato, mediante l'utilizzo di un \emph{pipeline} Job Jenkins. & Soddisfatto\\
+    \hline \textbf{F3}  & Ho realizzato, in collaborazione con gli altri stagisti universitari, una presentazione finale contenente tutti i risultati raggiunti durante lo \emph{stage}. Essa è stata poi esposta al presidente di Wintech e ai responsabili. & Soddisfatto\\
 \end{longtable}
+\endgroup
 
 \section{Maturazione professionale}
 %
