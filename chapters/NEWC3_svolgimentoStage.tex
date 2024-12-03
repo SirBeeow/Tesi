@@ -4,13 +4,13 @@ In questo capitolo vengono descritte tutte le attività da me svolte durante lo 
 \begin{enumerate}
 	\item[Requisiti -]ho espresso l'analisi avvenuta sugli obiettivi di \emph{stage} in maniera specifica e codificata.
     \item[Utilizzo delle tecnologie - ]ho raccolto tutte le attività legate all'utilizzo di Power Automate e Power Apps da me svolte. Queste azioni sono conseguenza dell'obiettivo aziendale relativo alla comprensione delle funzionalità, dei lati positivi e dei lati negativi di tali tecnologie.
-    \item[Applicazione di DevOps -]ho raccolto tutte le attività legate alle fasi di DevOps identificate, sviluppate ed integrate con i progetti Power Automate e Power Apps. Dopo aver esplorato tali tecnologie, era obiettivo aziendale comprendere se tale metodologia era a loro applicabile e con quali modalità.
+    \item[Applicazione di DevOps -]ho raccolto tutte le attività legate alle fasi di DevOps identificate, sviluppate ed integrate con i progetti Power Automate e Power Apps. Dopo aver esplorato tali tecnologie, era obiettivo aziendale comprendere se tale metodologia fosse a loro applicabile e con quali modalità.
     \item[Risultati raggiunti - ]ho raccolto tutti i risultati ottenuti qualitativamente e quantitativamente.
 \end{enumerate}
 
 \section{Requisiti}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In accordo con il \emph{tutor} aziendale e coerentemente con i vincoli temporali predefinti, l'analisi dei requisiti è avvenuta in maniera limitata, ponendo il proprio \emph{focus} sui bisogni e sugli obiettivi progettuali.\\
-Gli obiettivi del mio \emph{stage} sono derivati in parte dalle dichiarazioni aziendali iniziali e in parte, in accordo con il \emph{tutor} aziendale, in risposta ai bisogni emersi durante lo svolgimento dello \emph{stage}.\\
+Gli obiettivi del mio \emph{stage} sono derivati in parte dalle dichiarazioni aziendali iniziali, e in parte in accordo con il \emph{tutor} aziendale, in risposta ai bisogni emersi durante lo svolgimento dello \emph{stage}.\\
 Essi sono divisi nelle categorie:
 \begin{enumerate}
 	\item[O -]obiettivi obbligatori, vincolanti in quanto obiettivi primari richiesti dall'azienda.
@@ -69,7 +69,7 @@ Essi, avendo iniziato lo svolgimento del progetto circa una settimana prima, mi 
 Inoltre, mi hanno reso partecipe del loro studio avvenuto riguardo la possibilità di integrare gli strumenti Planner e Taiga. 
 
 \subsection{Power Automate}
-Ho pertanto studiato approfonditamente tali tecnologie con l'ausilio delle numerose guide e \emph{tutorial} offerti da Microsoft.\\
+A seguito di un iniziale \emph{meeting} con il \emph{tutor} aziendale, avvenuto al fine di discutere il mio progetto di \emph{stage}, ho studiato approfonditamente Power Automate con l'ausilio delle numerose guide e \emph{tutorial} offerti da Microsoft.\\
 Essi sono direttamente accessibili dalla \emph{home} di Power Automate e Power Apps e sono divisi in moduli testuali corredati da immagini, dalla durata e argomenti specifici. 
 
 \begin{figure}[htbp] 
@@ -111,9 +111,8 @@ Sono emersi quindi due obiettivi: il primo, utile per apprendere le tecnologie i
 Il secondo (obiettivo D2.2), più concreto e integrabile con i prodotti aziendali, si focalizza sull'applicazione ai flussi Power Automate di chiamate \gls{http}(Hypertext Transfer Protocol), in italiano "protocollo di trasferimento ipertestuale".\\
 Esso è un protocollo di rete, ovvero un insieme di regole formalmente descritte che definiscono le modalità di comunicazione tra due o più apparecchiature elettroniche, usato come principale sistema per la trasmissione di informazioni sul \emph{web}.
 
-Le prime fasi dello \emph{stage} sono state autonome e a supporto della comprensione ed esplorazione delle tecnologie a me richieste. 
-Avendo iniziato le mie attività con Power Automate, ho realizzato un primo flusso al fine di testare l'utilizzo di: Trigger, Azioni, collegamento con i servizi Microsoft OneDrive ed Excel, Azioni condizionali, cicli Do until, inizializzazione e modifica di variabili.\\
-Tale flusso viene eseguito automaticamente quando viene creato un \emph{file} dentro ad un \emph{path} specifico su OneDrive e di conseguenza invia un'approvazione notificata sia tramite Teams che Outlook.\\
+Dopo aver compreso la tecnologia descritta, ho realizzato un primo flusso al fine di testare l'utilizzo di: Trigger, Azioni, collegamento con i servizi Microsoft OneDrive ed Excel, Azioni condizionali, cicli Do until, inizializzazione e modifica di variabili.\\
+Esso viene eseguito automaticamente quando viene creato un \emph{file} dentro ad un \emph{path} specifico su OneDrive e di conseguenza invia un'approvazione notificata sia tramite Teams che Outlook.
 Dopo aver ricevuto la risposta, il flusso agisce di conseguenza spostando il \emph{file} iniziale in un \emph{path} specifico in funzione dell'esito dell'approvazione.
 Viene in aggiunta eseguito un controllo sui \emph{file} già presenti nel percorso di destinazione e, nel caso fosse già presente un documento omonimo, il documento da spostare viene rinominato.\\
 Questo controllo avviene ciclicamente incrementando un valore posto nel nome del \emph{file} fino al verificarsi dell'effettiva possibilità di eseguire lo spostamento.\\
@@ -124,9 +123,8 @@ Infine viene eseguito uno \emph{script} Excel il quale scrive in una tabella di 
     \caption{Flusso per testare condizioni, approvazioni ed esecuzione di \emph{script}.}
     \label{fig:flussoApprovazioni}
 \end{figure}
-\newline \noindent A fini illustrativi l'immagine mostra una versione semplificata del flusso descritto. Essa esclude il controllo della presenza di un \emph{file} omonimo e quindi non include il ciclo Do until e l'inizializzazione e modifica di variabili.\\
-Successivamente, ho prodotto una presentazione PowerPoint al fine di esporre al \emph{\emph{tutor}} aziendale le funzionalità, i lati positivi e i lati negativi delle tecnologie Power Automate e Power Apps, in funzione di quanto appreso durante la prima settimana di \emph{stage}.
-
+\newline \noindent A fini illustrativi l'immagine mostra una versione semplificata del flusso descritto.
+Essa esclude il controllo della presenza di un \emph{file} omonimo e quindi non include il ciclo Do until e l'inizializzazione e modifica di variabili.\\
 
 
 \subsection{Power Apps}
@@ -150,44 +148,36 @@ Questo non comprende solo le peculiarità grafiche ma soprattutto il loro compor
 Tali istruzioni vengono definite utilizzando Microsoft Power Fx, il quale rappresenta un linguaggio di programmazione dichiarativo, fortemente tipizzato e con uso limitato di codice, usato in Microsoft Power Platform.\\
 Quest'ultima piattaforma include un insieme di strumenti e tecnologie, compresi Power Automate e Power Apps, pensati per offrire la possibilità di sviluppare prodotti \emph{software} con limitata necessità di scrivere, e conoscere, codice tramite linguaggi di programmazione.\\\\
 
-
-A seguito dell'analisi avvenuta sulle tecnologie oggetto di \emph{stage}, ho identificato il compito che Power Automate e Power Apps devono avere all'interno di un progetto. 
-Esse sono infatti tecnologie pensate per sviluppare in maniera rapida soluzioni relativamente semplici.\\
+Successivamente, ho prodotto una presentazione PowerPoint al fine di esporre al \emph{\emph{tutor}} aziendale le funzionalità, i lati positivi e i lati negativi delle tecnologie Power Automate e Power Apps, in funzione di quanto appreso durante la prima settimana di \emph{stage}.
+Le conclusioni che ho tratto, e di cui ho avuto più volte conferma durante lo \emph{stage}, sono relative al fatto che tali tecnologie sono pensate per sviluppare in maniera rapida soluzioni relativamente semplici.\\
 Nel momento in cui ci fosse la necessità di applicare logiche molto complesse o l'integrazione con servizi esterni dalla \emph{suite} Microsoft, tali strumenti non sono più ideali in quanto si incomberebbe in numerosi vincoli tecnologici.
-Questo è un fattore importante da considerare nelle fasi di progettazione di un progetto.\\
-
 
 
 \subsection{Microsoft Solutions}
-Come ulteriore oggetto di analisi e studio, ho affrontato l'utilizzo e la comprensione delle Microsoft Solutions.
+Avendo compreso le tecnologie principali oggetto dello \emph{stage}, ho approfondito lo studio e l'utilizzo delle Microsoft Solutions.
 Esse fanno parte della \emph{suite} Microsoft Power Platform e sono degli strumenti che servono a contenere tutti i flussi Power Automate e applicazioni Power Apps corrispondenti a uno stesso progetto, in modo da poterli sviluppare e distribuire in maniera organizzata e centralizzata.\\
 Esistono due tipi di Soluzioni: 
 \begin{itemize}
     \item Gestite: destinate prevalentemente per gli ambienti di produzione e \emph{test}, non permettono la modifica degli elementi al suo interno. Per generare una Soluzione gestita è necessario esportare una soluzione non gestita.
     \item Non gestite: destinate prevalentemente per gli ambienti di sviluppo, permettono la modifica degli elementi al suo interno e la sua esportazione.
 \end{itemize}
-A differenza delle tecnologie precedentemente descritte, le Microsoft Solution non erano materia già affrontata in azienda, per cui il loro apprendimento è avvenuto in maniera totalmente autonoma mediante la documentazione presente nei siti \emph{web} Microsoft dedicati.\\
+A differenza delle tecnologie precedentemente descritte, le Microsoft Solution non erano materia già affrontata in azienda, per cui la loro individuazione e il loro apprendimento è avvenuto in maniera totalmente autonoma mediante la documentazione presente nei siti \emph{web} Microsoft dedicati.\\
 Le Soluzioni preservano i loro dati, e quelli degli elementi in esse contenuti, nel sistema di archiviazione Microsoft Dataverse che funge da \emph{database} centralizzato per applicazioni sviluppate con la Power Platform.\\
-Tale adozione permette di usufruire di funzionalità altrimenti assenti.
-Le conseguenze del loro utilizzo e le motivazioni che mi hanno portato ad utilizzare questa tecnologia sono materia di discussione presente nella sezione \hyperref[progettazioneSolutions]{Adozione delle Microsoft Solutions}.\\
-
-L'adozione delle Soluzioni, essendo esse basate sul sistema di archiviazione Dataverse, comporta la possibilità aggiuntiva di poter visionare la "Version history" dei flussi Power Automate. Tale funzionalità è in grado di ripristinare specifiche versioni precedenti dei flussi, agevolando le fasi di sviluppo.
+Tale adozione permette di usufruire di funzionalità altrimenti assenti.\\
+L'adozione delle Soluzioni, comporta la possibilità aggiuntiva di poter visionare la "Version history" dei flussi Power Automate. Tale funzionalità è in grado di ripristinare specifiche versioni precedenti dei flussi, agevolando le fasi di sviluppo.
 \begin{figure}[htbp] 
     \centering 
     \includegraphics[width=0.8\columnwidth]{versionHistory} 
     \caption{Funzionalità Version history nei flussi Power Automate.}
     \label{fig:versionHistory}
 \end{figure}
-\newline \noindent Inoltre, essendo i componenti di una Soluzione contenuti in un unico pacchetto esportabile, la gestione dei progetti così organizzati risulta più agevole, soprattutto nelle fasi Build, Code e Deploy. 
-
-
 
 \subsection{Applicazioni aziendali}
-Il \emph{focus} principale dello \emph{stage} è compiere un'analisi sulle tecnologie al fine di raggiungere gli obiettivi riguardanti la ricerca sull'effettiva applicabilità delle pratiche di \gls{DevOps} ai progetti realizzati con Power Automate e Power Apps.
-Con il \emph{tutor} aziendale abbiamo però fin da subito definito che avrei alternato tali attività con fasi di sviluppo su applicazioni aziendali al fine di approfondire la conoscenza delle tecnologie in oggetto e di diventare operativo in modo più efficace.\\
+Il principale obiettivo dello \emph{stage} è analizzare le tecnologie per valutare l'applicabilità delle pratiche di \gls{DevOps} ai progetti sviluppati con Power Automate e Power Apps.
+Tuttavia, in accordo con il \emph{tutor} aziendale, abbiamo deciso fin dall'inizio di alternare queste attività con fasi di sviluppo su applicazioni aziendali, così da approfondire la conoscenza delle tecnologie e acquisire maggiore operatività in modo efficace.\\
 Insieme al membro del \emph{team} di sviluppo responsabile per la realizzazione delle applicazioni Power Apps e dei flussi Power Automate aziendali, ho affrontato problemi di sviluppo di vario genere in funzione delle necessità del momento, potendo analizzare diversi prodotti aziendali.\\
-Le effettive attività di programmazione svolte su queste applicazioni sono presenti nella sezione \hyperref[sviluppoApplicazioni]{Sviluppo di applicazioni aziendali}.\\
 I principali prodotti su cui abbiamo collaborativamente lavorato sono:
+
 \subsubsection*{Report di visita}
 Principale applicazione su cui ho lavorato e con cui ho svolto attività di analisi al fine di comprendere le tecnologie utilizzate.
 Essa ha l'obiettivo di offrire la possibilità ad un dipendente dell'azienda, il quale dovesse trovarsi nella sede di un cliente, di registrare e condividere con i colleghi, in un ambiente condiviso, un \emph{report} della visita al fine di tracciare l'esperienza con il cliente.\\
@@ -205,9 +195,24 @@ Essa offre quindi la possibilità di:
 \begin{figure}[htbp] 
     \centering 
     \includegraphics[width=1\columnwidth]{RDV} 
-    \caption{Interfaccia grafica di Report di visita.}
+    \caption{Interfaccia grafica di "Report di visita".}
     \label{fig:RDV}
 \end{figure}
+
+Le attività di sviluppo di "Report di visita" hanno affiancato le attività di ricerca del mio \emph{stage} per la maggior parte della sua durata.\\
+Esse si sono focalizzate sulle strategie di \emph{retrieve} dei dati tramite appositi flussi Power Automate collegati all'applicazione.\\
+Ho usato SharePoint come strumento di archiviazione principale, ma ho testato anche la possibilità \emph{premium} di leggere dati da SQL Server.\\
+Le principali difficoltà che ho affrontato sono relative ai limiti sul numero di \emph{record} ottenibili per ogni richiesta a SharePoint:
+\begin{itemize}
+    \item Essendo per Power Apps una funzione non delegabile, ovvero che non può delegare l'elaborazione dei dati al \emph{server}, è presente il limite di 500 \emph{record} ottenibili di \emph{default} estendibile fino a 2000 modificando le impostazioni.
+    Inoltre, eventuali filtri sulla ricerca vengono applicati solo dopo aver ricevuto quel numero di dati, pertanto, il risultato ottenuto è un insieme limitato del risultato atteso.
+    \item Eseguendo l'analoga funzione da un flusso Power Automate, si incorre in un ulteriore limite imposto da SharePoint uguale a 5000 risultati ottenibili per chiamata.\\
+    In merito ho esplorato soluzioni legate al precaricamento di tutti i dati, mediante chiamate multiple, al fine di applicare successivamente il filtraggio dei dati richiesti, e all'utilizzo di chiamate \gls{http} a servizi SharePoint.
+    Ho successivamente scartato tali soluzioni a causa degli eccessivi tempi di esecuzione e ad altre limitazioni incontrate, come l'impossibilità per SarePoint di eseguire il comando di ricerca per sottostringa.
+    \item Dopo aver ottenuto i dati desiderati, sfruttando particolari funzionalità di indicizzazione delle liste SharePoint, ho incontrato difficoltà legate all'aggiornamento grafico di alcuni componenti fondamentali dell'applicazione utilizzati per mostrare dinamicamente i contenuti ricavati.\\
+    Ho risolto tale problema in collaborazione con il \emph{team} di sviluppo mediante la realizzazione di un nuovo componente \emph{custom}.  
+\end{itemize}
+Al fine di fare \emph{test} su liste SharePoint, popolate dinamicamente da un numero elevato di elementi, ho generato tabelle Excel in maniera automatica scrivendo appositamente degli “Office Scripts”.\\
 
 \subsubsection*{Registro accessi}
 Applicazione realizzata al fine di gestire agevolmente i \emph{check-in} e \emph{check-out} lavorativi del personale.\\
@@ -222,47 +227,25 @@ Le funzionalità presenti sono:
     \item Visualizzazione di tutti i propri \emph{check-in} e \emph{check-out} 
 \end{itemize}
 
+Le mie attività di sviluppo sulle applicazioni "Registro accessi" e "Non conformità" sono legate ad aspetti grafici e all'individuazione di possibili risoluzioni di problemi legati alle singole funzioni Fx. 
+
 \subsubsection*{Non conformità}
 Nel momento in cui ho svolto lo \emph{stage}, questa applicazione era nelle sue prime fasi di sviluppo e le sue funzionalità non erano state ancora definite pienamente.\\
-I suoi obiettivi sono quelli di creare e gestire un flusso approvativo a più \emph{step}, dove per ogni fase vengono notificati i corrispondenti incaricati, ai quali viene richiesta la compilazione di \emph{form} relativi alla non conformità di un prodotto e alle conseguenti azioni da intraprendere.\\
-
-Le attività di progettazione che ho svolto, relative alle applicazioni aziendali, sono state limitate alla scelta delle strategie da esplorare per risolvere i problemi emersi.
-Questo perché tali applicazioni erano già presenti da tempo al momento del mio arrivo in azienda.
-Eccezione è fatta per l'applicazione "Non conformità" che, a differenza delle altre, era nelle sue prime fasi di sviluppo.\\
-Al fine di comprenderne gli obiettivi ho preso parte a dei \emph{meeting} dedicati con il \emph{\emph{tutor}} aziendale e la parte del \emph{team} di sviluppo coinvolta.\\ 
+Al fine di comprenderne gli obiettivi, ho preso parte a dei \emph{meeting} dedicati con il \emph{tutor} aziendale e con parte del \emph{team} di sviluppo. 
+È quindi emersa la necessità di creare e gestire un flusso approvativo a più \emph{step}, dove per ogni fase vengono notificati i corrispondenti incaricati, ai quali viene richiesta la compilazione di \emph{form} relativi alla non conformità di un prodotto e alle conseguenti azioni da intraprendere.\\
 Ho in seguito contribuito a progettare l'aspetto grafico e le soluzioni atte a soddisfarne i requisiti, ma il mio periodo di \emph{stage} è terminato prima che io potessi iniziare il loro sviluppo.  
 
-\subsubsection*{Report di visita}
-Le attività di sviluppo dell'applicazione aziendale Report di visita hanno affiancato le attività di ricerca del mio \emph{stage} per la maggior parte della sua durata.\\
-Esse, oltre all'integrazione delle pratiche \gls{DevOps} descritte precedentemente, si sono focalizzate sulle strategie di \emph{retrieve} dei dati tramite appositi flussi Power Automate collegati all'applicazione.\\
-Ho usato SharePoint come strumento di archiviazione principale, ma ho testato anche la possibilità \emph{premium} di leggere dati da SQL Server.\\
-Le principali difficoltà che ho affrontato sono relative ai limiti sul numero di \emph{record} ottenibili per ogni richiesta a SharePoint:
-\begin{itemize}
-    \item Essendo per Power Apps una funzione non delegabile, ovvero che non può delegare l'elaborazione dei dati al \emph{server}, è presente il limite di 500 \emph{record} ottenibili di \emph{default} estendibile fino a 2000 modificando le impostazioni.
-    Inoltre eventuali filtri sulla ricerca vengono applicati solo dopo aver ricevuto quel numero di dati, pertanto, il risultato ottenuto è un insieme limitato del risultato atteso.
-    \item Eseguendo l'analoga funzione da un flusso Power Automate, si incorre in un ulteriore limite imposto da SharePoint uguale a 5000 risultati ottenibili per chiamata.\\
-    In merito ho esplorato soluzioni legate al precaricamento di tutti i dati, mediante chiamate multiple, al fine di applicare successivamente il filtraggio dei dati richiesti, e all'utilizzo di chiamate \gls{http} a servizi SharePoint.
-    Ho successivamente scartato tali soluzioni a causa degli eccessivi tempi di esecuzione e ad altre limitazioni incontrate, come l'impossibilità per SarePoint di eseguire il comando di ricerca per sottostringa.
-    \item Dopo aver ottenuto i dati desiderati, sfruttando particolari funzionalità di indicizzazione delle liste SharePoint, ho incontrato difficoltà legate all'aggiornamento grafico di alcuni componenti fondamentali dell'applicazione utilizzati per mostrare dinamicamente i contenuti ricavati.\\
-    Ho risolto tale problema in collaborazione con il \emph{team} di sviluppo mediante la realizzazione di un nuovo componente \emph{custom}.  
-\end{itemize}
-Al fine di fare \emph{test} su liste SharePoint, popolate dinamicamente da un numero elevato di elementi, ho generato tabelle Excel in maniera automatica scrivendo appositamente degli “Office Scripts”.\\
-Le mie attività di sviluppo legate alle applicazioni Registro accessi e "Non conformità" sono legate ad aspetti grafici e all'individuazione di possibili risoluzioni di problemi legati alle singole funzioni Fx. 
-
-
-
 \section{Applicazione di DevOps}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Prima di poter progettare una soluzione applicativa, al fine di applicare le fasi di \gls{DevOps} a progetti realizzati con Power Automate e Power Apps, ho analizzato e compreso quali fossero le implicazioni di ogni \emph{step}.\\
+Ho approfondito tale pratica soprattutto studiando gli approfondimenti presenti sul sito \emph{web} di Atlassian, nota compagnia di \emph{software enterprise}, e dalla teoria sul ciclo di vita del \emph{software} e sulle metodologie di automazione dei processi aziendali appresa durante il percorso di studi universitario.\\
+Ho inoltre studiato i documenti di sviluppo sicuro aziendali, nei quali sono presenti delle linee guida su come adottare il \gls{DevOps} in Wintech.\\
+Al fine di applicare le automazioni necessarie per adottare al \emph{software} le metodologie \gls{DevOps}, come richiesto dagli obiettivi di \emph{stage}, ho individuato lo strumento Jenkins.\\
 
 \subsubsection*{Jenkins}
-Al fine di applicare le automazioni necessarie per adottare al \emph{software} le metodologie \gls{DevOps}, come richiesto dagli obiettivi di \emph{stage}, ho individuato lo strumento Jenkins.\\
-Esso rispecchia perfettamente le mie necessità ed è inoltre già conosciuto e applicato dal resto del \emph{team} di sviluppo, rappresentando quindi una tecnologia consolidata che non necessita di ulteriore formazione all'interno dell'azienda.\\
-Ho appreso le conoscenze necessarie per studiare e utilizzare tale strumento in totale autonomia mediante la consultazione delle guide e del numeroso materiale presente \emph{online} comprese le pagine \emph{web} ufficiali di Jenkins con gli annessi video \emph{tutorial}.\\
+Le motivazioni principali che mi hanno portato ad adottare questo strumento sono il fatto che esso rispecchia perfettamente le mie necessità ed è inoltre già conosciuto e applicato dal resto del \emph{team} di sviluppo, rappresentando quindi una tecnologia consolidata che non necessita di ulteriore formazione all'interno dell'azienda.\\
+Ho appreso in totale autonomia le conoscenze necessarie per studiarlo e utilizzarlo, consultando le guide e il numeroso materiale disponibile \emph{online}. In quest'ultimo sono comprese le pagine \emph{web} ufficiali di Jenkins con i relativi video \emph{tutorial}.\\
 Esso è uno strumento scritto in linguaggio di programmazione Java che viene eseguito all'interno di un \emph{web server} e offre la possibilità di creare, gestire, eseguire e monitorare dei progetti Jenkins chiamati "Job", potendone visionare e registrare i \emph{report} di \emph{output}.\\
-Essi sono unità di lavoro configurabili che rappresentano un'attività o un progetto specifico che Jenkins esegue. Inoltre possono essere di diverso tipo ma tutti sono basati sull'esecuzione di uno \emph{script} o una \emph{pipeline} di automazione.\\
-Una \emph{pipeline} Jenkins è una sequenza di fasi chiamate "Stage", eseguite in serie o in parallelo, responsabili di specifiche operazioni definite dall'utente, per esempio \emph{build}, \emph{test}, \emph{deploy}.\\
-Esse possono essere definite tramite il linguaggio di programmazione Groovy oppure tramite l'interfaccia grafica di Jenkins.\\
-Questo strumento permette dunque di fornire servizi di integrazione continua ed è indicato per l'applicazione di alcune fasi di \gls{DevOps} come Build e Test, il caricamento automatico dei \emph{file} sul \emph{repository} di versionamento desiderato e l'autenticazione automatica ai servizi Microsoft tramite comandi Power Platform CLI.\\
-Quest'ultima è un'interfaccia a riga di comando che offre la possibiltà di eseguire un insieme di comandi specifici atti all'autenticazione e alla gestione degli ambienti e delle Microsoft Solutions.\\
+Essi sono unità di lavoro configurabili che rappresentano un'attività o un progetto specifico che Jenkins esegue. Inoltre, possono essere di diverso tipo, ma tutti sono basati sull'esecuzione di uno \emph{script} o una \emph{pipeline} di automazione.\\
 \begin{figure}[htbp] 
     \centering 
     \includegraphics[width=0.9\columnwidth]{esempioJenkins} 
@@ -272,26 +255,25 @@ Quest'ultima è un'interfaccia a riga di comando che offre la possibiltà di ese
     Fonte: \url{https://commons.wikimedia.org/wiki/File:Updated-jenkins-view.png}.
 \end{figure}
 
+Una \emph{pipeline} Jenkins è una sequenza di fasi chiamate "Stage", eseguite in serie o in parallelo, responsabili di specifiche operazioni definite dall'utente, per esempio \emph{build}, \emph{test}, \emph{deploy}.\\
+Esse possono essere definite tramite il linguaggio di programmazione Groovy oppure tramite l'interfaccia grafica di Jenkins.\\
+Questo strumento permette dunque di fornire servizi di \gls{Continuous Integration}, ed è indicato per l'applicazione di alcune fasi di \gls{DevOps} come Build e Test, il caricamento automatico dei \emph{file} sul \emph{repository} di versionamento desiderato e l'autenticazione automatica ai servizi Microsoft tramite comandi Power Platform CLI.\\
+Quest'ultima è un'interfaccia a riga di comando che offre la possibiltà di eseguire un insieme di comandi specifici atti all'autenticazione e alla gestione degli ambienti e delle Microsoft Solutions.\\
 Riguardo alla scelta del tipo di Job da adottare in Jenkins, ho individuato il "Multibranch Pipeline Job".
 Esso permette di collegare un \emph{repository} Git e ha la possibilità di gestire automaticamente una \emph{pipeline} indipendente, contenuta in un apposito \emph{file} chiamato "Jenkinsfile", per ogni \emph{branch}.
 Tale Job ha inoltre la possibilità di eseguire automaticamente i Jenkinsfile corrispondenti solo ai \emph{branch} in cui è avvenuta una modifica, rendendo questo strumento ideale per la gestione di progetti Git.\\
 
 
-
-
-Prima di poter progettare una soluzione applicativa al fine di applicare le fasi di \gls{DevOps} a progetti realizzati con Power Automate e Power Apps, ho analizzato e compreso quali fossero le implicazioni di ogni \emph{step}.\\
-Ho approfondito tale pratica soprattutto studiando gli approfondimenti presenti sul sito \emph{web} di Atlassian, nota compagnia di \emph{software enterprise}, e dalla teoria sul ciclo di vita del \emph{software} e sulle metodologie di automazione dei processi aziendali appresa durante il percorso di studi universitario.\\
-Ho inoltre studiato i documenti di sviluppo sicuro aziendali, nei quali sono presenti delle linee guida su come adottare il \gls{DevOps} in Wintech.\\
-Le sue fasi sono:
-
+Le fasi di \gls{DevOps} sono:\\
 \subsection{Plan}
-Essendo la fase iniziale del ciclo, ha lo scopo di definire i requisiti, pianificare il ciclo di vita del progetto e identificarne le metodologie di lavoro. Adottando una metodologa iterativa, è consono che la pianificazione e le conseguenti fasi successive, possano subire modifiche rispetto alle precedenti pianificazioni.
+Essendo la fase iniziale del ciclo, ha lo scopo di definire i requisiti, pianificare il ciclo di vita del progetto e identificarne le metodologie di lavoro.
+Adottando una metodologa iterativa, è consono che la pianificazione e le conseguenti fasi successive, possano subire modifiche rispetto alle precedenti pianificazioni.\\
 
 Come strumenti identificati per la pianificazione delle attività ho utilizzato Planner e Taiga.
 Essi permettono di categorizzare tutte le attività da assegnare al \emph{team} di sviluppo tramite \emph{tag} e contenitori specifici, i quali definiscono lo stato di avanzamento dei lavori.\\
-Nello specifico, Planner viene utilizzato solo dal responsabile di progetto e serve a tenere traccia dei casi d'uso, mentre Taiga si occupa di tracciare i \emph{task} più specifici assegnati ai membri del \emph{team}, il quale si occupa di organizzarli.
+Nello specifico, Planner viene utilizzato solo dal responsabile di progetto e serve a tenere traccia dei casi d'uso, mentre Taiga si occupa di tracciare i \emph{task} più specifici assegnati ai membri del \emph{team}, il quale si occupa di organizzarli.\\
     
-Le attività pratiche legate alla fase di pianificazione sono la configurazione degli ambienti Planner e Taiga e la loro condivisione e utilizzo con i membri del \emph{team} coinvolti.\\
+Le attività pratiche legate alla fase di pianificazione sono la configurazione degli strumenti identificati e la loro condivisione e utilizzo con i membri del \emph{team} coinvolti.\\
 Inoltre, in collaborazione con lo stagista responsabile del progetto \hyperref[stageGiacomo]{Integrazione sistemi di pianificazione di progetto}, abbiamo esplorato la possibilità di integrare i flussi Power Automate al lavoro da lui svolto.
 Questo al fine di sostituire le logiche, realizzate tramite complessi \emph{scirpt}, responsabili per l'interazione e la sincronizzazione tra le due piattaforme di pianificazione.\\
 Per farlo abbiamo inoltre esplorato l'utilizzo dei \emph{webhooks}, ovvero degli strumenti \emph{web} che permettono di configurare l'invio automatico di chiamate \gls{http} di ritorno.
@@ -300,16 +282,27 @@ A causa delle limitazioni incontrate nell'utilizzo di servizi di \emph{webhooks}
 
 
 \subsection{Code}
- Dopo aver compreso gli obiettivi progettuali e aver identificato il modo per soddisfarli, vengono sviluppate le soluzioni individuate seguendo le metodologie e le norme definite in fase Plan.\\
+Dopo aver compreso gli obiettivi progettuali e aver identificato il modo per soddisfarli, vengono sviluppate le soluzioni individuate seguendo le metodologie e le norme definite in fase Plan.\\
 Essendo il progetto di \emph{stage} basato su tecnologie non sviluppabili tramite strumenti tradizionali, come IDE non proprietari e linguaggi di programmazione consolidati, l'analisi della fase Code è stata necessaria per comprendere le funzionalità disponibili agli utenti al fine di sviluppare tali prodotti.\\
 È compresa in questa fase anche la ricerca avvenuta al fine di individuare le metodologie e gli strumenti adatti a sviluppare progetti con le tecnologie in oggetto in maniera collaborativa e adottando un efficace metodo di versionamento.\\
 Questo ha necessitato di uno studio sullo strumento Git, già ampiamente affrontato durante il percorso di studi universitari.\\
 Infine, è compresa nella fase Code anche l'attività di analisi statica del codice, la quale supporta le fasi di sviluppo identificando e segnalando eventuali errori nel codice sorgente senza la necessità di eseguirlo.
 
+\subsubsection*{Sistema di versionamento}
 Il versionamento di tutte le parti dei progetti realizzati con Power Apps e Power Automate è avvenuto in un singolo \emph{repository} Git in modo da garantire una migliore organizzazione dei dati e facilità di ripristino di specifiche versioni.\\
 Per il lavoro collaborativo ho individuato la \emph{feature} che integra il collegamento ad un \emph{repository} Git con Power Apps e permette di fare \emph{commit} e \emph{push} automaticamente.\\
 Il \emph{repository} è diviso nei \emph{branch} "Main", per le versioni funzionanti e stabili del prodotto, "Develop", per il prodotto ancora in fase di sviluppo, e diversi \emph{feature branch} utilizzati dai singoli sviluppatori per apportare modifiche limitate a singole funzioni.\\
-Per applicare a tali progetti l'analisi statica del codice, ho individuato come soluzione l'utilizzo degli strumenti nativi offerti da Microsoft:
+
+Ho quindi adattato, prima in un \emph{branch} di prova e poi nei restanti, il \emph{repository} Git dell'applicazione aziendale "Report di visita" in modo da rispecchiare le norme definite.
+Esse riguardano le regole da seguire per versionare il progetto e la struttura dei percorsi dei \emph{file}, divisi in base alla loro funzione.\\  
+Ho definito tali norme con la collaborazione di parte del \emph{team} di sviluppo e dello stagista universitario responsabile del progetto \hyperref[stageDavide]{Applicativi di DevOps in ambito Sistemi}.\\ 
+Per fare in modo di contenere nel \emph{repository} i \emph{file} relativi ai flussi Power Automate e le applicazioni Power Apps, ho predisposto una cartella apposita al fine di contenere il pacchetto ZIP relativo alla Microsoft Solution del progetto.\\ 
+Tale pacchetto assume valore in ottica di \emph{backup} e ripristino, in caso sia necessaria l'esecuzione di una specifica versione del progetto.\\  
+Per fare in modo che Power Apps riesca ad utilizzare la funzione integrata che gli permette di interfaccairsi con Git direttamente dalla sua interfaccia grafica, è necessario che nel \emph{repository} sia presente tale applicazione in un formato non compresso.
+Abbiamo pertanto deciso di mantenere, per quanto ridondante, una copia dell'applicazione al fine di agevolare le fasi di sviluppo.\\ 
+
+\subsubsection*{Analisi statica del codice}
+Per applicare l'analisi statica del codice, ho individuato l'utilizzo degli strumenti nativi offerti da Microsoft:
 \begin{itemize}
     \item Verifica flusso: permette l'esecuzione di un controllo sul codice e la visualizzazione di errori sul flusso come i campi obbligatori mancanti, gli \emph{input} non validi o i problemi legati alle licenze. 
     \item Verifica app: permette l'esecuzione di un controllo sul codice e la visualizzazione di errori sull'applicazione come formule Fx non valide, problemi di accessibilità o problemi legati alle origini dati. 
@@ -322,22 +315,14 @@ Per applicare a tali progetti l'analisi statica del codice, ho individuato come 
     \label{fig:verificaApp}
 \end{figure}
 
-\noindent Non ho utilizzato gli strumenti di analisi statica esterni poiché, a seguito di \emph{test} esplorativi e attività di ricerca in merito, è emersa l'eccessiva difficoltà nell'integrazione di qualsiasi strumento non offerto da Microsoft, ai \emph{file} generati dai flussi Power Apps e alle applicazioni Power Automate. 
-
-Le attività comprese al fine di predisporre la fase Code, per la sua applicazione a progetti Power Automate e Power Apps, sono principalmente la realizzazione e documentazione del sistema di versionamento individuato.
-Inoltre è inclusa l'applicazione degli strumenti per l'analisi statica del codice identificati e la redazione della relativa documentazione.\\
-Per il versionamento ho adattato, prima in un \emph{branch} di prova e poi nei restanti, il \emph{repository} Git dell'applicazione aziendale Report di visita in modo da rispecchiare le norme definite.
-Esse riguardano le regole da seguire per versionare il progetto e la struttura dei percorsi dei \emph{file}, divisi in base alla loro funzione.\\  
-Ho definito tali norme con la collaborazione di parte del \emph{team} di sviluppo e dello stagista universitario responsabile del progetto \hyperref[stageDavide]{Applicativi di DevOps in ambito Sistemi}.\\ 
-Per fare in modo di contenere nel \emph{repository} i \emph{file} relativi ai flussi Power Automate e le applicazioni Power Apps, ho predisposto una cartella apposita al fine di contenere il pacchetto ZIP relativo alla Microsoft Solution del progetto.\\ 
-Tale pacchetto nel \emph{repository} assume valore in ottica di \emph{backup} e ripristino, in caso sia necessaria l'esecuzione di una specifica versione del progetto.\\  
-Per fare in modo che Power Apps riesca ad utilizzare la funzione integrata che gli permette di interfaccairsi con Git direttamente dalla sua interfaccia grafica, è necessario che nel \emph{repository} sia presente tale applicazione in un formato non compresso.
-Abbiamo pertanto deciso di mantenere, per quanto ridondante, una copia dell'applicazione al fine di agevolare le fasi di sviluppo.\\ 
-Per l'analisi statica del codice ho esplorato altri strumenti esterni come l'applicazione di strumenti di analisi statica consolidati, ad esempio SonarQube, applicati tramite IDE esterni ai dati generati da Power Automate e Power Apps.\\  
-Inoltre ho constatato la possibilità di utilizzare gli strumenti diagnostici nativi di tali tecnologie anche tramite i comandi della Power Platform CLI, in modo da automatizzare la raccolta dei risultati.\\ 
+Ho constatato la possibilità di utilizzare gli strumenti diagnostici nativi di tali tecnologie anche tramite i comandi della Power Platform CLI, in modo da automatizzare la raccolta dei risultati.\\ 
 Tuttavia, questa funzione risulta superflua, poiché i risultati sono più facilmente accessibili tramite l'interfaccia grafica durante le fasi di sviluppo.
-Inoltre, perde di utilità se, per verificare lo stato del codice, è necessario eseguire uno \emph{script} e analizzare un complesso \emph{file} JSON.\\ 
-Ho redatto e condiviso i documenti “Norme di progetto” e “Analisi statica” con il \emph{team} di sviluppo e con il \emph{\emph{tutor}} aziendale.\\  
+Essa perde di utilità se, per verificare lo stato del codice, è necessario eseguire uno \emph{script} e analizzare un complesso \emph{file} JSON.\\ 
+
+Ho poi esplorato altri strumenti esterni di analisi statica del codice consolidati, ad esempio SonarQube, applicati tramite IDE esterni ai dati generati da Power Automate e Power Apps.
+Successivamente, ho deciso di non applicare tali soluzioni poiché, a seguito di \emph{test} esplorativi e attività di ricerca in merito, è emersa l'eccessiva difficoltà nell'integrazione di qualsiasi strumento non offerto da Microsoft, ai \emph{file} generati dalle tecnologie in oggetto. 
+
+Inoltre ho redatto i documenti “Norme di progetto” e “Analisi statica” e li ho condivisi con il \emph{team} di sviluppo e con il \emph{\emph{tutor}} aziendale.\\  
 Infine ho prodotto una presentazione PowerPoint contenente le principali informazioni presenti nei documenti citati e l'ho esposta al \emph{team} di sviluppo. 
 
 
@@ -397,7 +382,7 @@ Grazie all'Azione del flusso “Response”, lo \emph{script} può proseguire al
 \end{figure}
 \newline Nell'immagine è mostrata una porzione dello \emph{script} nel quale viene, a fini dimostrativi, controllato se il risultato della chiamata è stata un successo, definito con codice 200, e se l'\emph{output} del flusso è uguale ad un intero di valore 1.
 In funzione dell'esito del controllo e dello stato di successo della chiamata, viene mostrato a schermo un relativo messaggio.\\
-Ai fini di rendere automatico questo processo, ho incluso l'esecuzione dello \emph{script} illustrato all'interno del nel Jenkinsfile relativo al Job Jenkins dell'applicazione aziendale Report di visita.
+Ai fini di rendere automatico questo processo, ho incluso l'esecuzione dello \emph{script} illustrato all'interno del nel Jenkinsfile relativo al Job Jenkins dell'applicazione aziendale "Report di visita".
 Tale pratica garantisce la qualità e la funzionalità attesa dai flussi testati, però è da considerare che la natura dei prodotti realizzati con Power Automate richiede che essi vengano modificati, al fine di essere predisposti alla ricezione e alla risposta delle chiamate \gls{http} di \emph{test}.
 Inoltre è da tenere in considerazione che tali funzioni necessitano della licenza \emph{premium}.\\\\
 Per le applicazioni Power Apps ho esplorato la possibilità di estrarre, tramite la funzione “Scarica suite”, un \emph{file} contenente le azioni registrate dallo strumento Test Studio ma, in funzione delle conclusioni esplicitate precedentemente riguardo tale strumento, non ho integrato tale strategia nel sistema di \emph{testing}.\\\\
@@ -580,7 +565,7 @@ Ogni nozione da me acquisita, ogni norma stipulata e ogni soluzione implementata
     \hline Jenkinsfile per progetti Power Automate/Power Apps\\
     \hline \emph{Script} Excel per la creazione automatica di tabelle\\
     \hline \emph{Script} Node.js per il \emph{test} di flussi tramite chiamate \gls{http}\\
-    \hline Sviluppo di funzioni Fx sul prodotto aziendale Report di visita\\
+    \hline Sviluppo di funzioni Fx sul prodotto aziendale "Report di visita"\\
     \hline Flussi per il \emph{retreive} dei dati da liste SharePoint\\
     \hline Progetto di esempio Angular\\
     \hline Jenkinsfile relativo al progetto di esempio Angular\\
